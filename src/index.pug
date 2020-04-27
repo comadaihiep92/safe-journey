@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Safe-Journey
+        link(rel="stylesheet", href="../css/reset.css")
+        link(rel="stylesheet", href="../css/style.css")
+    body
+        .wrapper
+            .row
+                header.header.container
+                    nav.nav
+                        .logo
+                            a(href="javascript:void(0)")
+                                img(src="../img/logo.png")
+                        ul.nav__list
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link.nav__link--active Home
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link About Us
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link Compare Prices
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link Booking Status
+            .row.row--bg
+                .shadow
+                .banner.container
+                    h1.banner__title Compare Prices. Book Tickets. Send Luggage
+                    p.banner__desc Search Through 15,802 Buses Across Nigeria & Ghana
+                    .box
+                        .box__type
+                            .box__tab.box--active
+                                p One way
+                            .box__tab
+                                p Round trip
+                        .box__date
+                            .input-box
+                                label(for="park")
+                                input(type="text" placeholder="Search by State & Park")#park.input.input1
+                            .input-box
+                                label(for="state")
+                                input(type="text" placeholder="To State")#state.input.input2
+                            .input-box
+                                label(for="date")
+                                span.icon3
+                                input(type="text" placeholder="Departure Date")#date.input.input3
+                            .input-box
+                                label(for="seat")
+                                input(type="text" placeholder="No of Seat")#seat.input.input4
+                        .btn
+                            button.btn__search Search Bus
+                            img(src="../img/icon-arrow-white.png")
+            //- .row.row--info
+            .row.row__relative
+                .row--info
+                .info.container
+                    .info__box
+                        .info__title
+                            h1 COMPARE PRICES FARE
+                        .info__num
+                            p 3+
+                        .info__desc
+                            p
+                                | No of Countries
+                                br
+                                | Reached
+                    .info__box
+                        .info__title
+                            h1 CHARTER VEHICLE
+                        .info__num
+                            p 5,892+
+                        .info__desc
+                            p
+                                | No of Bus
+                                br
+                                | Routes
+                    .info__box
+                        .info__title
+                            h1 SEND LUGGAGES
+                        .info__num
+                            p 10+
+                        .info__desc
+                            p
+                                | No of
+                                br
+                                | Transporters
+            .row
+                .top.container
+                    .top__title
+                        .top__left
+                            h2 Top Route
+                        .top__right
+                            ul
+                                li
+                                    a(href="javascript:void(0)")
+                                        img(src="../img/icon-back.png", alt="")
+                                li
+                                    a(href="javascript:void(0)").active
+                                        img(src="../img/icon-next.png", alt="")
+                    .top__box
+                        .top__item
+                            .img
+                                img(src="../img/img-book1.jpg", alt="")
+                            p Lagos - Enugu
+                            .book
+                                a(href="javascript:void(0)") BOOK NOW
+                        .top__item
+                            .img
+                                img(src="../img/img-book2.jpg", alt="")
+                            p Abuja - Lagos
+                            .book
+                                a(href="javascript:void(0)") BOOK NOW
+                        .top__item
+                            .img
+                                img(src="../img/img-book3.jpg", alt="")
+                            p Lagos - Kano
+                            .book
+                                a(href="javascript:void(0)") BOOK NOW
+                    .top__pagination
+                        ul
+                            li.pagi.active
+                                a(href="javascript:void(0)")
+                            li.pagi
+                                a(href="javascript:void(0)")
+                            li.pagi
+                                a(href="javascript:void(0)")
+                            li.pagi
+                                a(href="javascript:void(0)")
+
+            .row
+                .download.container
+                    .download__left
+                        h2 Download Our Mobile App
+                        p Booking your trip is just a touch away. With our mobile app, you can book anytime on the go.
+                        .download__box
+                            .img
+                                img(src="../img/chplay.png", alt="")
+                            .img
+                                img(src="../img/apple.png", alt="")
+                    .download__right
+                        .img
+                            img(src="../img/iphone.png", alt="")
+                        .img
+                            img(src="../img/Note15.png", alt="")
+            .row
+                .review.container
+                    .top__title
+                        .top__left
+                            h2
+                                | What our clients are saying about
+                                br
+                                | safe journey.
+                        .top__right
+                            ul
+                                li
+                                    a(href="javascript:void(0)")
+                                        img(src="../img/icon-back.png", alt="")
+                                li
+                                    a(href="javascript:void(0)").active
+                                        img(src="../img/icon-next.png", alt="")
+                    .review__box
+                        .review__item
+                            .review__star
+                                ul
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star.png", alt="")
+                            .review__text
+                                p "Last December, on the 22nd, my beautiful wife and daughter travelled to Ghana to see our uncle in Accra, she was a bit scared going by road instead of flying but the way your customer care (Esther) spoke to us, calmed her down and we had a beautiful time booking & travelling with your platform! Una Try oh!!"
+                            .review__author
+                                .author__avata
+                                    img(src="../img/ava1.png", alt="")
+                                .author__info
+                                    .author__name
+                                        h3 AUSTIN
+                                    .author__address
+                                        p AGBOR, DELTA
+                        .review__item
+                            .review__star
+                                ul
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                            .review__text
+                                p "I had never heard of your company till my friend told me about it this year. I was trying to get a cheap bus from PH to lag as a student na, lol... Anyways, I am glad I did because I met someone special on my way. Thank God for my friend & your company too"
+                            .review__author
+                                .author__avata
+                                    img(src="../img/ava2.png", alt="")
+                                .author__info
+                                    .author__name
+                                        h3 SANDRA K
+                                    .author__address
+                                        p PortHarcourt
+                        .review__item.active
+                            .review__star
+                                ul
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                                    li
+                                        a(href="javascript:void(0)")
+                                            img(src="../img/icon-star-yellow.png", alt="")
+                            .review__text
+                                p "My husband was returning from the States for our 5th wedding anniversary, so our church RCCG decided at the last minute to surprise him at the airport. We were lost and needed to charter a vehicle when God sent us your advert on my bible app!! Long story short, it was our best anniversary till date. God bless."
+                            .review__author
+                                .author__avata
+                                    img(src="../img/ava3.png", alt="")
+                                .author__info
+                                    .author__name
+                                        h3 MRS. BRIFO
+                                    .author__address
+                                        p KUMASI, GHANA
+            .row
+                .ads.container
+                    .ads__bg
+                    .ads__list
+                        .ads__item
+                            img(src="../img/logo1.png", alt="")
+                        .ads__item
+                            img(src="../img/logo2.png", alt="")
+                        .ads__item
+                            img(src="../img/logo3.png", alt="")
+                        .ads__item
+                            img(src="../img/logo4.png", alt="")
+            .row
+                footer.footer.container
+                    .footer__list
+                        .footer__item
+                            .footer__title
+                                h2 MENU LISTS
+                            ul.footer__box
+                                li
+                                    a(href="javascript:void(0)") About us
+                                li
+                                    a(href="javascript:void(0)") Terms and Conditions
+                                li
+                                    a(href="javascript:void(0)") Cargo
+                                li
+                                    a(href="javascript:void(0)") FAQ’S
+                                li
+                                    a(href="javascript:void(0)") Charter Service
+                        .footer__item
+                            .footer__title
+                                h2 CONTACT US
+                            .footer__box
+                                p Get through to us via our social media platform below. Instagram , Twitter and Facebook.
+                                ul.social
+                                    li.social__img
+                                        a
+                                            img(src="../img/icon-ins.png", alt="")
+                                    li.social__img
+                                        a
+                                            img(src="../img/icon-twitter.png", alt="")
+                                    li.social__img
+                                        a
+                                            img(src="../img/icon-facebook.png", alt="")
+                                p We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.
+                                .contact
+                                    .contact__img
+                                        img(src="../img/icon-phone.png", alt="")
+                                    p 09076555353
+                        .footer__item
+                            .footer__title
+                                h2 SEND A MESSAGE
+                            .footer__box
+                                label(for="email") Email Address
+                                input(type="email" placeholder="Enter Email Address")#email
+                                label(for="message") Message
+                                input(type="text" placeholder="Type Message Here")#message
+                                button#submit Send Message
+            //- .row
+            //- .row
