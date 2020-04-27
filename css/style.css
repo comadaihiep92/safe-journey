@@ -19,7 +19,7 @@ html {
 }
 
 .row {
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto;
 }
 
@@ -55,18 +55,9 @@ html {
 
 .row--bg {
   position: relative;
-  width: 144rem;
+  max-width: 144rem;
   height: 100%;
   background: url("../img/bg-big.jpg") no-repeat center center;
-}
-
-.shadow {
-  position: absolute;
-  width: 144rem;
-  height: 80rem;
-  left: 0px;
-  top: 0px;
-  background: linear-gradient(180deg, #126fb2 -4.75%, rgba(18, 111, 178, 0) 37.27%);
 }
 
 .banner {
@@ -79,6 +70,8 @@ html {
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
+  text-align: center;
+  box-sizing: border-box;
 }
 .banner__title {
   font-size: 5.8rem;
@@ -95,7 +88,7 @@ html {
 }
 
 .box {
-  width: 124rem;
+  max-width: 124rem;
   height: 35.6rem;
   background: #ffffff;
   box-shadow: 0px 2rem 4rem rgba(196, 196, 196, 0.15);
@@ -641,6 +634,25 @@ html {
   border: none;
   font-weight: 400;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1362px) {
+  .banner__title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 1362px) {
+  .banner__title {
+    font-size: 5rem;
+  }
+
+  .review__box {
+    flex-wrap: wrap;
+  }
+
+  .review__item:nth-child(3) {
+    margin-top: 7rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
