@@ -796,6 +796,10 @@ html {
     top: 0;
     left: 0;
   }
+
+  .footer input {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
