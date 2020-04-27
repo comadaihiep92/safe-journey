@@ -24,9 +24,10 @@ html {
 }
 
 .header {
-  height: 8rem;
+  height: 100%;
   display: flex;
   align-items: center;
+  padding: 2rem 0;
 }
 
 .nav {
@@ -267,7 +268,7 @@ html {
 .top__title {
   width: 100%;
   display: flex;
-  max-height: 10rem;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
@@ -656,6 +657,10 @@ html {
     margin-top: 7rem;
   }
 
+  .review__item {
+    margin-right: 0 !important;
+  }
+
   .box {
     display: flex;
     flex-direction: column;
@@ -679,12 +684,40 @@ html {
   }
 }
 @media only screen and (max-width: 1024px) {
-  .info, .top__box, .download {
+  .info,
+.top__box,
+.download {
     flex-direction: column;
   }
 
-  .top__item, .download__left {
+  .top__item,
+.download__left {
     margin-bottom: 2rem;
+  }
+
+  .download__left {
+    padding-left: 0 !important;
+  }
+
+  .download__left,
+.download__right {
+    width: 100%;
+  }
+
+  .footer__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__item {
+    text-align: center;
+    padding-right: 0 !important;
+    margin-bottom: 2rem;
+  }
+
+  .footer__box {
+    align-items: center;
   }
 }
 @media only screen and (max-width: 957px) {
@@ -704,8 +737,13 @@ html {
   }
 
   .ads__item {
-    padding-right: 0;
+    padding-right: 0 !important;
     margin-bottom: 1.5rem;
+  }
+
+  .top__title {
+    flex-direction: column;
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 728px) {
@@ -721,20 +759,42 @@ html {
     margin-bottom: 1rem;
   }
 
-  .footer__list {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .box__date input {
+    width: 25rem;
   }
 
-  .footer__item {
-    text-align: center;
-    padding-right: 0 !important;
+  .banner__title {
+    font-size: 3.9rem;
+  }
+
+  .banner__desc {
+    font-size: 2.8rem;
+  }
+
+  .download__box {
+    flex-direction: column;
+    position: relative;
+    left: -40px;
+  }
+  .download__box .img {
+    left: 0 !important;
+  }
+
+  .review__text {
+    height: 100%;
+  }
+
+  .review__item {
     margin-bottom: 2rem;
   }
 
-  .footer__box {
-    align-items: center;
+  .download__right {
+    flex-direction: column;
+  }
+  .download__right .img {
+    position: unset !important;
+    top: 0;
+    left: 0;
   }
 }
 
