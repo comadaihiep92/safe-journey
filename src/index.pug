@@ -30,24 +30,47 @@ html(lang="en")
                     p.banner__desc Search Through 15,802 Buses Across Nigeria & Ghana
                     .box
                         .box__type
-                            .box__tab.box--active
-                                p One way
-                            .box__tab
-                                p Round trip
-                        .box__date
-                            .input-box
-                                label(for="park")
-                                input(type="text" placeholder="Search by State & Park")#park.input.input1
-                            .input-box
-                                label(for="state")
-                                input(type="text" placeholder="To State")#state.input.input2
-                            .input-box
-                                label(for="date")
-                                span.icon3
-                                input(type="text" placeholder="Departure Date")#date.input.input3
-                            .input-box
-                                label(for="seat")
-                                input(type="text" placeholder="No of Seat")#seat.input.input4
+                            input(type="radio" checked="checked" name="tab-radio").box__tab#tab1.tab1
+                            label(for="tab1").label-tab One way
+                            //.box--active
+                            input(type="radio" name="tab-radio").box__tab#tab2.tab2
+                            label(for="tab2").label-tab Round trip
+                            //- .box__tab#tab2
+                            //-     p Round trip
+
+                            .box__container
+                                .box__date.content1
+                                    .input-box
+                                        label(for="park")
+                                        input(type="text" placeholder="Search by State & Park")#park.input.input1
+                                    .input-box
+                                        label(for="state")
+                                        input(type="text" placeholder="To State")#state.input.input2
+                                    .input-box
+                                        label(for="date")
+                                        span.icon3
+                                        input(type="date" placeholder="Departure Date")#date.input.input3
+                                    .input-box
+                                        label(for="seat")
+                                        input(type="text" placeholder="No of Seat")#seat.input.input4
+                                .box__date.content2
+                                    .input-box
+                                        label(for="park")
+                                        input(type="text" placeholder="Search by State & Park")#park.input.input1
+                                    .input-box
+                                        label(for="state")
+                                        input(type="text" placeholder="To State")#state.input.input2
+                                    .input-box
+                                        label(for="date")
+                                        span.icon3
+                                        input(type="date" placeholder="Departure Date")#date.input.input3
+                                    .input-box
+                                        label(for="date")
+                                        span.icon3
+                                        input(type="date" placeholder="Arrival Date")#date.input.input3
+                                    .input-box
+                                        label(for="seat")
+                                        input(type="text" placeholder="No of Seat")#seat.input.input4
                         .btn
                             button.btn__search Search Bus
                             img(src="img/icon-arrow-white.png")

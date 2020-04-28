@@ -31,7 +31,6 @@ html {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 2rem 0;
 }
 // nav
 .nav {
@@ -39,6 +38,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   &__list {
     display: flex;
     justify-content: center;
@@ -114,34 +115,66 @@ html {
   padding: 4rem 10.5rem 5rem;
   box-sizing: border-box;
   &__type {
-    display: flex;
+    display: block;
     margin-bottom: 4rem;
+    & input:hover + label {
+      background: #5ba4a4;
+    }
+    & input:checked + label {
+      background: #126fb2;
+      border-radius: 2px 0px 0px 2px;
+    }
   }
   &__tab {
+    // padding: 2.1rem 5.2rem;
+    // background-color: #d3d3d3;
+    // box-shadow: 0px 2rem 4rem rgba(128, 143, 150, 0.19);
+    // border-radius: 3px;
+    // cursor: pointer;
+
+    // p {
+    //   font-size: 1.8rem;
+    //   line-height: 2.2rem;
+    //   font-weight: bold;
+    //   color: $color-white;
+    //   text-transform: uppercase;
+    // }
+    // change to tab
+    display: none;
+  }
+  .label-tab {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+
     padding: 2.1rem 5.2rem;
     background-color: #d3d3d3;
     box-shadow: 0px 2rem 4rem rgba(128, 143, 150, 0.19);
     border-radius: 3px;
     cursor: pointer;
-
-    p {
-      font-size: 1.8rem;
-      line-height: 2.2rem;
-      font-weight: bold;
-      color: $color-white;
-      text-transform: uppercase;
-    }
   }
   .box--active {
     background: #126fb2;
     border-radius: 2px 0px 0px 2px;
   }
   &__date {
-    display: flex;
+    display: none; // display: none to hidden and display: flex to show
     justify-content: space-between;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 4rem;
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+  }
+  input.tab1:checked ~ .box__container .content1,
+  input.tab2:checked ~ .box__container .content2 {
+    display: flex;
+    transition: opacity ease-out 0.2s 0.1s;
   }
   .input-box {
     margin-right: 2.5rem;
@@ -701,6 +734,9 @@ html {
   }
 }
 @media only screen and (max-width: 1362px) {
+  .container {
+    padding: 0 5rem;
+  }
   .banner__title {
     font-size: 5rem;
   }
@@ -742,6 +778,9 @@ html {
   .top__item,
   .download__left {
     margin-bottom: 2rem;
+  }
+  .info__box:not(:first-child) {
+    margin-left: 0;
   }
   .download__left {
     padding-left: 0 !important;
@@ -832,7 +871,25 @@ html {
   .footer input {
     width: 100%;
   }
+  .box__type {
+    display: flex;
+    flex-direction: column;
+  }
+  .label-tab {
+    margin-bottom: 2rem;
+  }
 }
+
+@media only screen and (max-width: 665px) {
+  .box__type {
+    display: flex;
+    flex-direction: column;
+  }
+  .tab1 {
+    margin-bottom: 2rem;
+  }
+}
+
 @media only screen and (max-width: 465px) {
   .nav__list {
     flex-wrap: wrap;

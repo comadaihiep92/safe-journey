@@ -28,29 +28,52 @@
           <p class="banner__desc">Search Through 15,802 Buses Across Nigeria & Ghana</p>
           <div class="box">
             <div class="box__type">
-              <div class="box__tab box--active">
-                <p>One way</p>
-              </div>
-              <div class="box__tab">
-                <p>Round trip</p>
-              </div>
-            </div>
-            <div class="box__date">
-              <div class="input-box">
-                <label for="park"></label>
-                <input class="input input1" type="text" placeholder="Search by State &amp; Park" id="park"/>
-              </div>
-              <div class="input-box">
-                <label for="state"></label>
-                <input class="input input2" type="text" placeholder="To State" id="state"/>
-              </div>
-              <div class="input-box">
-                <label for="date"></label><span class="icon3"></span>
-                <input class="input input3" type="text" placeholder="Departure Date" id="date"/>
-              </div>
-              <div class="input-box">
-                <label for="seat"></label>
-                <input class="input input4" type="text" placeholder="No of Seat" id="seat"/>
+              <input class="box__tab tab1" type="radio" checked="checked" name="tab-radio" id="tab1"/>
+              <label class="label-tab" for="tab1">One way</label>
+              <!--.box--active-->
+              <input class="box__tab tab2" type="radio" name="tab-radio" id="tab2"/>
+              <label class="label-tab" for="tab2">Round trip</label>
+              <div class="box__container">
+                <div class="box__date content1">
+                  <div class="input-box">
+                    <label for="park"></label>
+                    <input class="input input1" type="text" placeholder="Search by State &amp; Park" id="park"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="state"></label>
+                    <input class="input input2" type="text" placeholder="To State" id="state"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="date"></label><span class="icon3"></span>
+                    <input class="input input3" type="date" placeholder="Departure Date" id="date"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="seat"></label>
+                    <input class="input input4" type="text" placeholder="No of Seat" id="seat"/>
+                  </div>
+                </div>
+                <div class="box__date content2">
+                  <div class="input-box">
+                    <label for="park"></label>
+                    <input class="input input1" type="text" placeholder="Search by State &amp; Park" id="park"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="state"></label>
+                    <input class="input input2" type="text" placeholder="To State" id="state"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="date"></label><span class="icon3"></span>
+                    <input class="input input3" type="date" placeholder="Departure Date" id="date"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="date"></label><span class="icon3"></span>
+                    <input class="input input3" type="date" placeholder="Arrival Date" id="date"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="seat"></label>
+                    <input class="input input4" type="text" placeholder="No of Seat" id="seat"/>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="btn">
