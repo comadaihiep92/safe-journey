@@ -184,6 +184,9 @@ html {
   display: inline-block;
   background-image: url("../img/calendar.png");
 }
+.box .icon--place {
+  background-image: url("../img/icon-place.png");
+}
 .box .btn {
   width: 29.5rem;
   height: 5.6rem;

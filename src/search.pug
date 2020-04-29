@@ -67,8 +67,82 @@ html(lang="en")
                                     label(for="seat")
                                     input(type="text" placeholder="No of Seat")#seat.input.input4.no-radius
                                 .btn.btn--search.btn--white Search
+                    .departure
+                        .departure__time
+                            p.departure__title Departure Time
+                            .departure__box
+                                .departure__left 00:00
+                                .departure__right 24:00
+                            .departure__range
+                                input(type="range")
+                        .departure__price
+                            p.departure__title Price Range
+                            .departure__box
+                                .departure__left ₦20,000
+                                .departure__right ₦20,000
+                            .departure__range
+                                input(type="range")
+                    .result
+                        .result__top
+                            h3.result__title Search Result
+                            span.icon--list
+                        .result__list
+                            .result__box
+                                .result__img
+                                    img(src="img/bus1.png", alt="")
+                                .result__time
+                                    .row
+                                        p Departure
+                                        p Arrival
+                                    .row 
+                                        span LAG
+                                        span
+                                            span.icon--arrival
+                                            span 1hr 20 mins
+                                        span EDO
+                                    .row
+                                        p 16:00
+                                        p 09:45
+                                    .row
+                                        p 12 Jan
+                                        p 13 Jan
+                                .result__info
+                                    ul
+                                        li
+                                            a(href="#") 14 Seaters
+                                        li
+                                            a(href="#") 4.3 Rating 
+                                        li
+                                            a(href="#") Fare Rule
+                                        li
+                                            a(href="#") Amenities
+                                .result__price
+                                    p N80,000
+                                    .result__button
+                                        a(href="#") Details
+                                        a(href="#") Select 
 
-            .row
+                    .rule
+                        .rule__left
+                            .rule__title Fare Rule
+                            .rule__box
+                                ul
+                                    li * Please note that cancellation charges will be applicable on total ticket value
+                                    li * Refundable amount is calculated based on scheduled bus departure time from the first boarding time. 
+                                ul
+                                    li * Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time
+                                    li * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point. 
+                        .rule__right
+                            ul
+                                span.icon--ac
+                                li AC
+                                span.icon--wifi
+                                li FREE WIFI
+                                span.icon--tivi
+                                li TELEVISION
+                                span.icon--snack
+                                li SNACKS          
+            .row    
                 footer.footer.container
                     .footer__list
                         .footer__item
