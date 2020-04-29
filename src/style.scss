@@ -186,6 +186,7 @@ html {
     position: relative;
   }
   .input {
+    height: 5.7rem;
     padding: 2rem 0 2rem 2.5rem;
     color: #9f9f9f;
     font-size: 1.4rem;
@@ -984,6 +985,7 @@ html {
   }
   .no-margin {
     margin: 0;
+    background: #ffffff;
   }
   .no-margin:not(:nth-of-type(4)) {
     border-right: 1px solid #efefef;
