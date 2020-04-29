@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Safe-Journey
+        link(rel="stylesheet", href="css/reset.css")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        .wrapper
+            .row
+                header.header.container
+                    nav.nav
+                        .logo
+                            a(href="javascript:void(0)")
+                                img(src="img/logo.png")
+                        ul.nav__list
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link.nav__link--active Home
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link About Us
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link Compare Prices
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link Booking Status
+            .row
+                //- search
+                .search.container
+                    ul.search__list-step
+                        li.search__step
+                            a.search__link(href="#")
+                                span.search__number 1
+                                | Search For Bus
+                        li.search__step
+                            a.search__link.active(href="#")
+                                span.search__number 2
+                                | Select Bus
+                        li.search__step
+                            a.search__link(href="#")
+                                span.search__number 3
+                                | Select Bus Seat
+                        li.search__step
+                            a.search__link(href="#")
+                                span.search__number 4
+                                | Passengers Info
+                        li.search__step
+                            a.search__link(href="#")
+                                span.search__number 5
+                                | Payment
+                    .box.search__box
+                        .box__container.search__container
+                            h1.search__title ONE WAY
+                            .box__date.content1.flex
+                                .input-box.no-margin
+                                    label(for="park")
+                                    span.icon3.icon--place
+                                    input(type="text" placeholder="Search by State & Park")#park.input.input3.no-radius
+                                .input-box.no-margin
+                                    label(for="state")
+                                    span.icon3.icon--place
+                                    input(type="text" placeholder="To State")#state.input.input3.no-radius
+                                .input-box.no-margin
+                                    label(for="date")
+                                    span.icon3
+                                    input(type="text" placeholder="Departure Date" onfocus="(this.type='date')")#date.input.input3.no-radius
+                                .input-box.no-margin
+                                    label(for="seat")
+                                    input(type="text" placeholder="No of Seat")#seat.input.input4.no-radius
+                                .btn.btn--search.btn--white Search
+
+            .row
+                footer.footer.container
+                    .footer__list
+                        .footer__item
+                            .footer__title
+                                h2 MENU LISTS
+                            ul.footer__box
+                                li
+                                    a(href="javascript:void(0)") About us
+                                li
+                                    a(href="javascript:void(0)") Terms and Conditions
+                                li
+                                    a(href="javascript:void(0)") Cargo
+                                li
+                                    a(href="javascript:void(0)") FAQ’S
+                                li
+                                    a(href="javascript:void(0)") Charter Service
+                        .footer__item
+                            .footer__title
+                                h2 CONTACT US
+                            .footer__box
+                                p Get through to us via our social media platform below. Instagram , Twitter and Facebook.
+                                ul.social
+                                    li.social__img
+                                        a
+                                            img(src="img/icon-ins.png", alt="")
+                                    li.social__img
+                                        a
+                                            img(src="img/icon-twitter.png", alt="")
+                                    li.social__img
+                                        a
+                                            img(src="img/icon-facebook.png", alt="")
+                                p We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.
+                                .contact
+                                    .contact__img
+                                        img(src="img/icon-phone.png", alt="")
+                                    p 09076555353
+                        .footer__item
+                            .footer__title
+                                h2 SEND A MESSAGE
+                            .footer__box
+                                label(for="email") Email Address
+                                input(type="email" placeholder="Enter Email Address")#email
+                                label(for="message") Message
+                                input(type="text" placeholder="Type Message Here")#message
+                                button#submit Send Message
+            //- .row
+            //- .row

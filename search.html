@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Safe-Journey</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <header class="header container">
+          <nav class="nav">
+            <div class="logo"><a href="javascript:void(0)"><img src="img/logo.png"/></a></div>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link nav__link--active" href="javascript:void(0)">Home</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">About Us</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Compare Prices</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Booking Status</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="row">
+        <div class="search container">
+          <ul class="search__list-step">
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">1</span>Search For Bus</a></li>
+            <li class="search__step"><a class="search__link active" href="#"><span class="search__number">2</span>Select Bus</a></li>
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">3</span>Select Bus Seat</a></li>
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">4</span>Passengers Info</a></li>
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">5</span>Payment</a></li>
+          </ul>
+          <div class="box search__box">
+            <div class="box__container search__container">
+              <h1 class="search__title">ONE WAY</h1>
+              <div class="box__date content1 flex">
+                <div class="input-box no-margin">
+                  <label for="park"></label><span class="icon3 icon--place"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="Search by State &amp; Park" id="park"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="state"></label><span class="icon3 icon--place"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="To State" id="state"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="date"></label><span class="icon3"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="Departure Date" onfocus="(this.type='date')" id="date"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="seat"></label>
+                  <input class="input input4 no-radius" type="text" placeholder="No of Seat" id="seat"/>
+                </div>
+                <div class="btn btn--search btn--white">Search</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <footer class="footer container">
+          <div class="footer__list">
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>MENU LISTS</h2>
+              </div>
+              <ul class="footer__box">
+                <li><a href="javascript:void(0)">About us</a></li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                <li><a href="javascript:void(0)">Cargo</a></li>
+                <li><a href="javascript:void(0)">FAQ’S</a></li>
+                <li><a href="javascript:void(0)">Charter Service</a></li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>CONTACT US</h2>
+              </div>
+              <div class="footer__box">
+                <p>Get through to us via our social media platform below. Instagram , Twitter and Facebook.</p>
+                <ul class="social">
+                  <li class="social__img"><a><img src="img/icon-ins.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-twitter.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-facebook.png" alt=""/></a></li>
+                </ul>
+                <p>We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.</p>
+                <div class="contact">
+                  <div class="contact__img"><img src="img/icon-phone.png" alt=""/></div>
+                  <p>09076555353</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>SEND A MESSAGE</h2>
+              </div>
+              <div class="footer__box">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Enter Email Address" id="email"/>
+                <label for="message">Message</label>
+                <input type="text" placeholder="Type Message Here" id="message"/>
+                <button id="submit">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
