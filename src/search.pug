@@ -101,25 +101,25 @@ html(lang="en")
                                 .result__item.result__img
                                     img(src="img/bus1.png", alt="")
                                 .result__item.result__time
-                                    .row
-                                        p Departure
-                                        p Arrival
-                                    .row
-                                        span LAG
-                                        span
-                                            span.icon--arrival
-                                            span 1hr 20 mins
-                                        span EDO
-                                    .row
-                                        p 16:00
-                                        p 09:45
-                                    .row
-                                        p 12 Jan
-                                        p 13 Jan
+                                    .result__row
+                                        p.row--title Departure
+                                        p.row--title Arrival
+                                    .result__row
+                                        span.row--address.row--padding LAG
+                                        span.row--address.row--flex
+                                            span.icon.icon--arrival
+                                            span.row--mini-time 1hr 20 mins
+                                        span.row--address.row--padding EDO
+                                    .result__row
+                                        p.row--time.row--padding 16:00
+                                        p.row--time.row--padding 09:45
+                                    .result__row
+                                        p.row--date.row--padding 12 Jan
+                                        p.row--date.row--padding 13 Jan
                                 .result__item.result__info
-                                    ul
+                                    ul.result__service
                                         li
-                                            a(href="#") 14 Seaters
+                                            a(href="#") 14 Seaters Arrival
                                         li
                                             a(href="#") 4.3 Rating
                                         li
@@ -127,31 +127,140 @@ html(lang="en")
                                         li
                                             a(href="#") Amenities
                                 .result__item.result__price
-                                    p N80,000
-                                    .result__button
-                                        a(href="#") Details
-                                        a(href="#") Select
-
-                    .rule
-                        .rule__left
-                            .rule__title Fare Rule
-                            .rule__box
-                                ul
-                                    li * Please note that cancellation charges will be applicable on total ticket value
-                                    li * Refundable amount is calculated based on scheduled bus departure time from the first boarding time.
-                                ul
-                                    li * Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time
-                                    li * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.
-                        .rule__right
-                            ul
-                                span.icon--ac
-                                li AC
-                                span.icon--wifi
-                                li FREE WIFI
-                                span.icon--tivi
-                                li TELEVISION
-                                span.icon--snack
-                                li SNACKS
+                                    .result__price-box
+                                        p.result__price-title N80,000
+                                        .result__button
+                                            a(href="#").btn.btn--result.btn--details Details
+                                            a(href="#").btn.btn--result.btn--select Select
+                            .result__box
+                                .result__item.result__img
+                                    img(src="img/bus2.png", alt="")
+                                .result__item.result__time
+                                    .result__row
+                                        p.row--title Departure
+                                        p.row--title Arrival
+                                    .result__row
+                                        span.row--address.row--padding LAG
+                                        span.row--address.row--flex
+                                            span.icon.icon--arrival
+                                            span.row--mini-time 1hr 20 mins
+                                        span.row--address.row--padding EDO
+                                    .result__row
+                                        p.row--time.row--padding 16:00
+                                        p.row--time.row--padding 09:45
+                                    .result__row
+                                        p.row--date.row--padding 12 Jan
+                                        p.row--date.row--padding 13 Jan
+                                .result__item.result__info
+                                    ul.result__service
+                                        li
+                                            a(href="#") 14 Seaters Arrival
+                                        li
+                                            a(href="#") 4.3 Rating
+                                        li
+                                            a(href="#") Fare Rule
+                                        li
+                                            a(href="#") Amenities
+                                .result__item.result__price
+                                    .result__price-box
+                                        p.result__price-title N80,000
+                                        .result__button
+                                            a(href="#").btn.btn--result.btn--details Details
+                                            a(href="#").btn.btn--result.btn--select Select
+                            .rule
+                                .rule__left
+                                    .rule__title Fare Rule
+                                    .rule__box
+                                        ul
+                                            li * Please note that cancellation charges will be applicable on total ticket value
+                                            li * Refundable amount is calculated based on scheduled bus departure time from the first boarding time.
+                                        ul
+                                            li * Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time
+                                            li * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.
+                                .rule__right
+                                    ul
+                                        li
+                                            span.icon.icon--ac
+                                            a(href="#") AC
+                                        li
+                                            span.icon.icon--wifi
+                                            a(href="#") FREE WIFI
+                                        li
+                                            span.icon.icon--tivi
+                                            a(href="#") TELEVISION
+                                        li
+                                            span.icon.icon--sandwich
+                                            a(href="#") SNACKS
+                            .result__box
+                                .result__item.result__img
+                                    img(src="img/bus3.png", alt="")
+                                .result__item.result__time
+                                    .result__row
+                                        p.row--title Departure
+                                        p.row--title Arrival
+                                    .result__row
+                                        span.row--address.row--padding LAG
+                                        span.row--address.row--flex
+                                            span.icon.icon--arrival
+                                            span.row--mini-time 1hr 20 mins
+                                        span.row--address.row--padding EDO
+                                    .result__row
+                                        p.row--time.row--padding 16:00
+                                        p.row--time.row--padding 09:45
+                                    .result__row
+                                        p.row--date.row--padding 12 Jan
+                                        p.row--date.row--padding 13 Jan
+                                .result__item.result__info
+                                    ul.result__service
+                                        li
+                                            a(href="#") 14 Seaters Arrival
+                                        li
+                                            a(href="#") 4.3 Rating
+                                        li
+                                            a(href="#") Fare Rule
+                                        li
+                                            a(href="#") Amenities
+                                .result__item.result__price
+                                    .result__price-box
+                                        p.result__price-title N80,000
+                                        .result__button
+                                            a(href="#").btn.btn--result.btn--details Details
+                                            a(href="#").btn.btn--result.btn--select Select
+                            .result__box
+                                .result__item.result__img
+                                    img(src="img/bus4.png", alt="")
+                                .result__item.result__time
+                                    .result__row
+                                        p.row--title Departure
+                                        p.row--title Arrival
+                                    .result__row
+                                        span.row--address.row--padding LAG
+                                        span.row--address.row--flex
+                                            span.icon.icon--arrival
+                                            span.row--mini-time 1hr 20 mins
+                                        span.row--address.row--padding EDO
+                                    .result__row
+                                        p.row--time.row--padding 16:00
+                                        p.row--time.row--padding 09:45
+                                    .result__row
+                                        p.row--date.row--padding 12 Jan
+                                        p.row--date.row--padding 13 Jan
+                                .result__item.result__info
+                                    ul.result__service
+                                        li
+                                            a(href="#") 14 Seaters Arrival
+                                        li
+                                            a(href="#") 4.3 Rating
+                                        li
+                                            a(href="#") Fare Rule
+                                        li
+                                            a(href="#") Amenities
+                                .result__item.result__price
+                                    .result__price-box
+                                        p.result__price-title N80,000
+                                        .result__button
+                                            a(href="#").btn.btn--result.btn--details Details
+                                            a(href="#").btn.btn--result.btn--select Select
             .row
                 footer.footer.container
                     .footer__list
