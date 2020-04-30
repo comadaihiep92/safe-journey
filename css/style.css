@@ -174,19 +174,6 @@ html {
 .box .input3 {
   padding-left: 5.5rem;
 }
-.box .icon3 {
-  position: absolute;
-  content: "aaa";
-  top: 1.9rem;
-  left: 1.5rem;
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  background-image: url("../img/calendar.png");
-}
-.box .icon--place {
-  background-image: url("../img/icon-place.png");
-}
 .box .btn {
   width: 29.5rem;
   height: 5.6rem;
@@ -958,6 +945,192 @@ html {
   line-height: 2.2rem;
   color: #ffffff;
   margin-bottom: 1.8rem;
+}
+
+.departure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.departure__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 11rem;
+}
+.departure__title {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #8d8d8d;
+  margin-bottom: 4.5rem;
+}
+.departure__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.departure__box-item {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 50rem;
+  color: #8e8e8e;
+}
+.departure__range {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.departure__range--box {
+  width: 15.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0px 10px 40px rgba(216, 216, 216, 0.5);
+  border-radius: 5px;
+}
+.departure__range label {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #126fb2;
+  position: relative;
+}
+.departure__range input {
+  width: 100%;
+}
+
+.result {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.result__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.3rem;
+}
+.result__title {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.747px;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+.result__list {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(239, 239, 239, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 25px rgba(216, 216, 216, 0.25);
+  border-radius: 3px;
+  padding: 2.5rem 3.3rem;
+}
+.result__box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.result__img {
+  width: 100%;
+  height: 100%;
+}
+.result__img img {
+  max-width: 100%;
+}
+.result__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result__item:not(:last-child) {
+  border-right: 1px solid rgba(239, 239, 239, 0.6);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+}
+
+.icon3 {
+  position: absolute;
+  content: "";
+  top: 1.9rem;
+  left: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background-image: url("../img/calendar.png");
+}
+
+.icon--place {
+  background-image: url("../img/icon-place.png");
+}
+
+.icon--back-label {
+  background: url("../img/icon-arrow-left.png") no-repeat center center;
+}
+
+.icon--next-label {
+  background: url("../img/icon-arrow-right.png") no-repeat center center;
+}
+
+.icon--list {
+  padding: 1rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background: url("../img/icon-list.png") no-repeat center center;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  border-radius: 6px;
+  height: 6px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(15%, #df7164), color-stop(15%, #f5d0cc));
+  background-image: -moz-linear-gradient(left center, #df7164 0%, #df7164 15%, #f5d0cc 15%, #f5d0cc 100%);
+}
+
+input[type=range]::-moz-range-track {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #df7164;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background-color: #df7164;
+  border: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

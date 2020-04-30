@@ -6,6 +6,8 @@ html(lang="en")
         title Safe-Journey
         link(rel="stylesheet", href="css/reset.css")
         link(rel="stylesheet", href="css/style.css")
+        script(src='https://code.jquery.com/jquery-3.5.0.min.js' integrity='sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=' crossorigin='anonymous')
+        script(src="js/main.js")
     body
         .wrapper
             .row
@@ -68,33 +70,41 @@ html(lang="en")
                                     input(type="text" placeholder="No of Seat")#seat.input.input4.no-radius
                                 .btn.btn--search.btn--white Search
                     .departure
-                        .departure__time
+                        .departure__item
                             p.departure__title Departure Time
                             .departure__box
-                                .departure__left 00:00
-                                .departure__right 24:00
+                                .departure__box-item 00:00
+                                .departure__box-item 24:00
                             .departure__range
-                                input(type="range")
-                        .departure__price
+                                .departure__range--box
+                                    span.icon.icon--back-label
+                                    label(for="time") 09:00
+                                    span.icon.icon--next-label
+                                input(type="range" id="time" min="1" max="100" step="1" value="25")
+                        .departure__item
                             p.departure__title Price Range
                             .departure__box
-                                .departure__left ₦20,000
-                                .departure__right ₦20,000
+                                .departure__box-item ₦20,000
+                                .departure__box-item ₦150,000
                             .departure__range
-                                input(type="range")
+                                .departure__range--box
+                                    span.icon.icon--back-label
+                                    label(for="money") ₦80,000
+                                    span.icon.icon--next-label
+                                input(type="range" id="money" min="1" max="100" step="1" value="25")
                     .result
                         .result__top
                             h3.result__title Search Result
-                            span.icon--list
+                            span.icon.icon--list
                         .result__list
                             .result__box
-                                .result__img
+                                .result__item.result__img
                                     img(src="img/bus1.png", alt="")
-                                .result__time
+                                .result__item.result__time
                                     .row
                                         p Departure
                                         p Arrival
-                                    .row 
+                                    .row
                                         span LAG
                                         span
                                             span.icon--arrival
@@ -106,21 +116,21 @@ html(lang="en")
                                     .row
                                         p 12 Jan
                                         p 13 Jan
-                                .result__info
+                                .result__item.result__info
                                     ul
                                         li
                                             a(href="#") 14 Seaters
                                         li
-                                            a(href="#") 4.3 Rating 
+                                            a(href="#") 4.3 Rating
                                         li
                                             a(href="#") Fare Rule
                                         li
                                             a(href="#") Amenities
-                                .result__price
+                                .result__item.result__price
                                     p N80,000
                                     .result__button
                                         a(href="#") Details
-                                        a(href="#") Select 
+                                        a(href="#") Select
 
                     .rule
                         .rule__left
@@ -128,10 +138,10 @@ html(lang="en")
                             .rule__box
                                 ul
                                     li * Please note that cancellation charges will be applicable on total ticket value
-                                    li * Refundable amount is calculated based on scheduled bus departure time from the first boarding time. 
+                                    li * Refundable amount is calculated based on scheduled bus departure time from the first boarding time.
                                 ul
                                     li * Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time
-                                    li * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point. 
+                                    li * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.
                         .rule__right
                             ul
                                 span.icon--ac
@@ -141,8 +151,8 @@ html(lang="en")
                                 span.icon--tivi
                                 li TELEVISION
                                 span.icon--snack
-                                li SNACKS          
-            .row    
+                                li SNACKS
+            .row
                 footer.footer.container
                     .footer__list
                         .footer__item
