@@ -9,19 +9,19 @@ $("input[type=range]").mousemove(function (e) {
     "-webkit-gradient(linear, left top, right top, " +
       "color-stop(" +
       percent +
-      "%, #df7164), " +
+      "%, #126fb2), " +
       "color-stop(" +
       percent +
-      "%, #F5D0CC)" +
+      "%, #f0f0f0)" +
       ")"
   );
 
   $(this).css(
     "background-image",
-    "-moz-linear-gradient(left center, #DF7164 0%, #DF7164 " +
+    "-moz-linear-gradient(left center, #126fb2 0%, #126fb2 " +
       percent +
-      "%, #F5D0CC " +
+      "%, #f0f0f0 " +
       percent +
-      "%, #F5D0CC 100%)"
+      "%, #f0f0f0 100%)"
   );
 });

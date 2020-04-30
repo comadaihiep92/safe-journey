@@ -6,8 +6,7 @@
     <title>Safe-Journey</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -68,7 +67,7 @@
                 <div class="departure__range--box"><span class="icon icon--back-label"></span>
                   <label for="time">09:00</label><span class="icon icon--next-label"></span>
                 </div>
-                <input type="range" id="time" min="1" max="100" step="1" value="25"/>
+                <input class="range--custom" type="range" id="time" min="1" max="100" step="1" value="45"/>
               </div>
             </div>
             <div class="departure__item">
@@ -81,7 +80,7 @@
                 <div class="departure__range--box"><span class="icon icon--back-label"></span>
                   <label for="money">₦80,000</label><span class="icon icon--next-label"></span>
                 </div>
-                <input type="range" id="money" min="1" max="100" step="1" value="25"/>
+                <input class="range--custom" type="range" id="money" min="1" max="100" step="1" value="45"/>
               </div>
             </div>
           </div>
@@ -294,5 +293,6 @@
         </footer>
       </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
