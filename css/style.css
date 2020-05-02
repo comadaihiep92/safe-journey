@@ -1268,6 +1268,11 @@ html {
   background: url("../img/icon-seat.png") no-repeat center center;
 }
 
+.icon--nonseat {
+  width: 4rem;
+  height: 3.7rem;
+}
+
 .btn {
   width: 29.5rem;
   height: 5.6rem;
@@ -1479,7 +1484,7 @@ input[type=range]::-moz-range-thumb {
 .seat {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   box-sizing: border-box;
 }
 .seat__item {
@@ -1520,6 +1525,7 @@ input[type=range]::-moz-range-thumb {
   align-items: center;
   position: relative;
   margin: 1.6rem;
+  box-sizing: border-box;
 }
 .seat__number {
   position: absolute;
@@ -1530,12 +1536,20 @@ input[type=range]::-moz-range-thumb {
   color: #000;
 }
 .seat__row {
-  width: 35%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
-.seat__door {
+.seat .door {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.seat .row--bg {
   width: 100%;
   height: 200px;
   background: red;
