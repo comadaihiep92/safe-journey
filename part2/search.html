@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Safe-Journey</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <header class="header container">
+          <nav class="nav">
+            <div class="logo"><a href="javascript:void(0)"><img src="img/logo.png"/></a></div>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link nav__link--active" href="javascript:void(0)">Home</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">About Us</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Compare Prices</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Booking Status</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="row">
+        <div class="search container">
+          <ul class="search__list-step">
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">1</span>Search For Bus</a></li>
+            <li class="search__step"><a class="search__link active" href="#"><span class="search__number">2</span>Select Bus</a></li>
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">3</span>Select Bus Seat</a></li>
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">4</span>Passengers Info</a></li>
+            <li class="search__step"><a class="search__link" href="#"><span class="search__number">5</span>Payment</a></li>
+          </ul>
+          <div class="box search__box">
+            <div class="box__container search__container">
+              <h1 class="search__title">ONE WAY</h1>
+              <div class="box__date content1 flex">
+                <div class="input-box no-margin">
+                  <label for="park"></label><span class="icon3 icon--place"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="Search by State &amp; Park" id="park"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="state"></label><span class="icon3 icon--place"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="To State" id="state"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="date"></label><span class="icon3"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="Departure Date" onfocus="(this.type='date')" id="date"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="seat"></label>
+                  <input class="input input4 no-radius" type="text" placeholder="No of Seat" id="seat"/>
+                </div>
+                <div class="btn btn--search btn--white">Search</div>
+              </div>
+            </div>
+          </div>
+          <div class="departure">
+            <div class="departure__item">
+              <p class="departure__title">Departure Time</p>
+              <div class="departure__box">
+                <div class="departure__box-item">00:00</div>
+                <div class="departure__box-item">24:00</div>
+              </div>
+              <div class="departure__range">
+                <div class="departure__range--box"><span class="icon icon--back-label"></span>
+                  <label for="time">09:00</label><span class="icon icon--next-label"></span>
+                </div>
+                <input class="range--custom" type="range" id="time" min="1" max="100" step="1" value="45"/>
+              </div>
+            </div>
+            <div class="departure__item">
+              <p class="departure__title">Price Range</p>
+              <div class="departure__box">
+                <div class="departure__box-item">₦20,000</div>
+                <div class="departure__box-item">₦150,000</div>
+              </div>
+              <div class="departure__range">
+                <div class="departure__range--box"><span class="icon icon--back-label"></span>
+                  <label for="money">₦80,000</label><span class="icon icon--next-label"></span>
+                </div>
+                <input class="range--custom" type="range" id="money" min="1" max="100" step="1" value="45"/>
+              </div>
+            </div>
+          </div>
+          <div class="result">
+            <div class="result__top">
+              <h3 class="result__title">Search Result</h3><span class="icon icon--list"></span>
+            </div>
+            <div class="result__list">
+              <div class="result__box">
+                <div class="result__item result__img"><img src="img/bus1.png" alt=""/></div>
+                <div class="result__item result__time">
+                  <div class="result__row">
+                    <p class="row--title">Departure</p>
+                    <p class="row--title">Arrival</p>
+                  </div>
+                  <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                  <div class="result__row">
+                    <p class="row--time row--padding">16:00</p>
+                    <p class="row--time row--padding">09:45</p>
+                  </div>
+                  <div class="result__row">
+                    <p class="row--date row--padding">12 Jan</p>
+                    <p class="row--date row--padding">13 Jan</p>
+                  </div>
+                </div>
+                <div class="result__item result__info">
+                  <ul class="result__service">
+                    <li><a href="#">14 Seaters Arrival</a></li>
+                    <li><a href="#">4.3 Rating</a></li>
+                    <li><a href="#">Fare Rule</a></li>
+                    <li><a href="#">Amenities</a></li>
+                  </ul>
+                </div>
+                <div class="result__item result__price">
+                  <div class="result__price-box">
+                    <p class="result__price-title">N80,000</p>
+                    <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="#">Select</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="result__box">
+                <div class="result__item result__img"><img src="img/bus2.png" alt=""/></div>
+                <div class="result__item result__time">
+                  <div class="result__row">
+                    <p class="row--title">Departure</p>
+                    <p class="row--title">Arrival</p>
+                  </div>
+                  <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                  <div class="result__row">
+                    <p class="row--time row--padding">16:00</p>
+                    <p class="row--time row--padding">09:45</p>
+                  </div>
+                  <div class="result__row">
+                    <p class="row--date row--padding">12 Jan</p>
+                    <p class="row--date row--padding">13 Jan</p>
+                  </div>
+                </div>
+                <div class="result__item result__info">
+                  <ul class="result__service">
+                    <li><a href="#">14 Seaters Arrival</a></li>
+                    <li><a href="#">4.3 Rating</a></li>
+                    <li><a href="#">Fare Rule</a></li>
+                    <li><a href="#">Amenities</a></li>
+                  </ul>
+                </div>
+                <div class="result__item result__price">
+                  <div class="result__price-box">
+                    <p class="result__price-title">N80,000</p>
+                    <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="#">Select</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="rule">
+                <div class="rule__left">
+                  <div class="rule__title">Fare Rule</div>
+                  <div class="rule__box">
+                    <ul>
+                      <li>* Please note that cancellation charges will be applicable on total ticket value</li>
+                      <li>* Refundable amount is calculated based on scheduled bus departure time from the first boarding time.</li>
+                    </ul>
+                    <ul>
+                      <li>* Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time</li>
+                      <li>* Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="rule__right">
+                  <ul>
+                    <li><span class="icon icon--ac"></span><a href="#">AC</a></li>
+                    <li><span class="icon icon--wifi"></span><a href="#">FREE WIFI</a></li>
+                    <li><span class="icon icon--tivi"></span><a href="#">TELEVISION</a></li>
+                    <li><span class="icon icon--sandwich"></span><a href="#">SNACKS</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="result__box">
+                <div class="result__item result__img"><img src="img/bus3.png" alt=""/></div>
+                <div class="result__item result__time">
+                  <div class="result__row">
+                    <p class="row--title">Departure</p>
+                    <p class="row--title">Arrival</p>
+                  </div>
+                  <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                  <div class="result__row">
+                    <p class="row--time row--padding">16:00</p>
+                    <p class="row--time row--padding">09:45</p>
+                  </div>
+                  <div class="result__row">
+                    <p class="row--date row--padding">12 Jan</p>
+                    <p class="row--date row--padding">13 Jan</p>
+                  </div>
+                </div>
+                <div class="result__item result__info">
+                  <ul class="result__service">
+                    <li><a href="#">14 Seaters Arrival</a></li>
+                    <li><a href="#">4.3 Rating</a></li>
+                    <li><a href="#">Fare Rule</a></li>
+                    <li><a href="#">Amenities</a></li>
+                  </ul>
+                </div>
+                <div class="result__item result__price">
+                  <div class="result__price-box">
+                    <p class="result__price-title">N80,000</p>
+                    <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="#">Select</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="result__box">
+                <div class="result__item result__img"><img src="img/bus4.png" alt=""/></div>
+                <div class="result__item result__time">
+                  <div class="result__row">
+                    <p class="row--title">Departure</p>
+                    <p class="row--title">Arrival</p>
+                  </div>
+                  <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                  <div class="result__row">
+                    <p class="row--time row--padding">16:00</p>
+                    <p class="row--time row--padding">09:45</p>
+                  </div>
+                  <div class="result__row">
+                    <p class="row--date row--padding">12 Jan</p>
+                    <p class="row--date row--padding">13 Jan</p>
+                  </div>
+                </div>
+                <div class="result__item result__info">
+                  <ul class="result__service">
+                    <li><a href="#">14 Seaters Arrival</a></li>
+                    <li><a href="#">4.3 Rating</a></li>
+                    <li><a href="#">Fare Rule</a></li>
+                    <li><a href="#">Amenities</a></li>
+                  </ul>
+                </div>
+                <div class="result__item result__price">
+                  <div class="result__price-box">
+                    <p class="result__price-title">N80,000</p>
+                    <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="#">Select</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <footer class="footer container">
+          <div class="footer__list">
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>MENU LISTS</h2>
+              </div>
+              <ul class="footer__box">
+                <li><a href="javascript:void(0)">About us</a></li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                <li><a href="javascript:void(0)">Cargo</a></li>
+                <li><a href="javascript:void(0)">FAQ’S</a></li>
+                <li><a href="javascript:void(0)">Charter Service</a></li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>CONTACT US</h2>
+              </div>
+              <div class="footer__box">
+                <p>Get through to us via our social media platform below. Instagram , Twitter and Facebook.</p>
+                <ul class="social">
+                  <li class="social__img"><a><img src="img/icon-ins.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-twitter.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-facebook.png" alt=""/></a></li>
+                </ul>
+                <p>We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.</p>
+                <div class="contact">
+                  <div class="contact__img"><img src="img/icon-phone.png" alt=""/></div>
+                  <p>09076555353</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>SEND A MESSAGE</h2>
+              </div>
+              <div class="footer__box">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Enter Email Address" id="email"/>
+                <label for="message">Message</label>
+                <input type="text" placeholder="Type Message Here" id="message"/>
+                <button id="submit">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
