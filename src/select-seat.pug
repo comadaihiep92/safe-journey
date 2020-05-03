@@ -290,37 +290,41 @@ html(lang="en")
                             p.item__desc Click on seat Select/Deselect
                             .seat__content.custom__seat-content
                                 .summary__item
-                                    .result__box.custom--seat
-                                        .result__row
-                                            span.row--address.row--padding Lagos (LOS)
-                                                p.row--desc Yaba, Lagos
-                                            .date--time
-                                                p.row--date.row--padding 12 Jan
-                                                p.row--date.row--padding 09:45
-                                        span.row--address.row--flex
-                                            span.icon.icon--arrival.icon--arrival-small
-                                            span.row--mini-time 1hr 20 mins
-                                        .result__row
-                                            span.row--address.row--padding EDO (Benin)
-                                                p.row--desc Ibadin Park
-                                            .date--time
-                                                p.row--date.row--padding 13 Jan
-                                                p.row--date.row--padding 16:00
-                                    .result__price-box
-                                        p.result__price-title N67,930
+                                    span.left--line
+                                    .div
+                                        .result__box.custom--seat.padding3
+                                            .result__row
+                                                span.row--address.row--padding Lagos (LOS)
+                                                    p.row--desc Yaba, Lagos
+                                                .date--time
+                                                    p.row--date.row--padding 12 Jan
+                                                    p.row--date.row--padding 09:45
+                                            span.row--address.row--flex
+                                                span.icon.icon--arrival.icon--arrival-small
+                                                span.row--mini-time 1hr 20 mins
+                                            .result__row
+                                                span.row--address.row--padding EDO (Benin)
+                                                    p.row--desc Ibadin Park
+                                                .date--time
+                                                    p.row--date.row--padding 13 Jan
+                                                    p.row--date.row--padding 16:00
+                                        .result__price-box.padding3
+                                            p.result__price-title N67,930
                                 .summary__item
-                                    .summary__transport
-                                        p Okeyson Transport
+                                    span.left--line.line--dashed
+                                    .summary__transport.padding3
+                                        p.line-text Okeyson Transport
                                 .summary__item
-                                    .summary__duration
+                                    span.left--line
+                                    .summary__duration.padding3
                                         .summary__duration1
-                                            p Duration
-                                            p 6 hr 30 mins
+                                            p.row--duration Duration
+                                            p.row--desc 6 hr 30 mins
                                         .summary__duration2
-                                            .summary__duration2-left
+                                            .summary__duration2-item
                                                 h3 Seat Number
                                                 p 35
-                                            .summary__duration2-right
+                                            .summary__duration2-item
                                                 h3 Amenities
                                                 ul
                                                     li
@@ -329,6 +333,16 @@ html(lang="en")
                                                     li
                                                         span.icon.icon--wifi
                                                         a(href="#") FREE WIFI
+                                .summary__item.seat-column.padding3
+                                    h3.seat__titleh3 Fare Rule
+                                    ul
+                                        li.seat__descp * Cancellation charges will be applicable on total ticket value
+                                        li.seat__descp * Refundable amount is calculated based on scheduled bus departure time from the first boarding time.
+                                        li.seat__descp * Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time
+                                        li.seat__descp * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.
+                                .btn
+                                    button.btn__search CONTINUE
+                                    img(src="img/icon-arrow-white.png")
             .row
                 footer.footer.container
                     .footer__list

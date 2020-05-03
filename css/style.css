@@ -1189,7 +1189,7 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 3.4rem;
   box-sizing: border-box;
@@ -1684,18 +1684,202 @@ input[type=range]::-moz-range-thumb {
 .seat .summary__item {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-.seat .summary__item:not(:last-child) {
+.seat .line-text {
+  position: relative;
+  padding: 1.1rem 0;
+  width: 100%;
   border-bottom: 1px solid rgba(235, 235, 235, 0.5);
+  border-top: 1px solid rgba(235, 235, 235, 0.5);
 }
 .seat .summary__transport {
-  padding: 1.1rem 0;
+  width: 100%;
 }
 .seat .summary__transport p {
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: #4a4a4a;
+}
+.seat .summary__duration {
+  width: 100%;
+}
+.seat .summary__duration1 {
+  margin-bottom: 3.9rem;
+}
+.seat .summary__duration1 .row--duration {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #979797;
+}
+.seat .summary__duration2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.seat .summary__duration2-item {
+  width: 100%;
+}
+.seat .summary__duration2-item h3 {
+  font-size: 1.8rem;
+  line-height: 1.6rem;
+  color: #4a4a4a;
+  margin-bottom: 3rem;
+}
+.seat .summary__duration2-item p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #979797;
+}
+.seat .summary__duration2-item ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.seat .summary__duration2-item li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2.8rem;
+}
+.seat .summary__duration2-item a {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #979797;
+  text-decoration: none;
+  margin-left: 1.1rem;
+}
+.seat .seat__titleh3 {
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.151667px;
+  color: #4a4a4a;
+  margin-bottom: 1.6rem;
+}
+.seat .seat__descp {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #979797;
+  margin-bottom: 2rem;
+}
+.seat .seat-column {
+  flex-direction: column;
+}
+.seat .left--line {
+  border: 1px solid #126fb2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.seat .left--line::after {
+  position: absolute;
+  top: -2px;
+  z-index: 2;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  border: 3px solid #126fb2;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background: white;
+}
+.seat .left--line::before {
+  position: absolute;
+  bottom: -15px;
+  z-index: 2;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  border: 3px solid #126fb2;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background: white;
+}
+.seat .line--dashed {
+  border: 1px dashed #126fb2;
+}
+.seat .padding3 {
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.seat .div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 992px) {
+  .seat {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seat__item {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .seat__bottom ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .seat__bottom li {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .seat__bottom .text--seat {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .seat .summary__duration2 {
+    flex-direction: column;
+  }
+
+  .summary__duration2-item {
+    margin-bottom: 2rem;
+  }
+
+  .seat__content {
+    padding: 4rem 2rem;
+  }
+
+  .div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .icon--arrival-small {
+    width: 10rem;
+  }
+
+  .seat__top {
+    padding: 7rem 2rem 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .seat__item-bus {
+    margin: 0;
+  }
+
+  .seat .right-seat {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
