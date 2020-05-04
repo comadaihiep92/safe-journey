@@ -1357,8 +1357,21 @@ html {
   width: 4rem;
   height: 3.7rem;
   background: url("../img/icon-seat.png") no-repeat center center;
-  box-shadow: 0px 12.5px 25px rgba(216, 216, 216, 0.85);
+
+  // box-shadow: 0px 12.5px 25px rgba(216, 216, 216, 0.85);
   // box-shadow: 0px 17.6756px 35.3512px rgba(0, 0, 0, 0.25);
+}
+.icon--book1 {
+  background: url("../img/img-seat-booked-smal.png") no-repeat center center;
+  // display: none;
+  transform: rotate(90deg);
+  color: red;
+}
+.icon--reserved1 {
+  background: url("../img/img-seat-reserved-small.png") no-repeat center center;
+  // display: none;
+  transform: rotate(90deg);
+  color: red;
 }
 .icon--nonseat {
   width: 4rem;
@@ -1663,7 +1676,10 @@ input[type="range"]::-moz-range-thumb {
     text-align: center;
     text-transform: uppercase;
     color: #000;
+    cursor: pointer;
+    padding: 1rem;
   }
+
   &__row {
     width: 100%;
     display: flex;
@@ -1861,6 +1877,34 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     justify-content: flex-start;
   }
+  .seat__row {
+    input {
+      display: none;
+    }
+  }
+  .left-seat {
+    width: 100%;
+  }
+  .right-seat {
+    position: relative;
+    .seat__row--right {
+      position: absolute;
+      left: -11rem;
+    }
+  }
+  // input.tab1:checked ~ .box__container .content1,
+}
+.seat__item-bus input:checked ~ .icon--seat {
+  background: url("../img/img-seat-selected-smal.png") no-repeat center center;
+  // display: none;
+  transform: rotate(90deg);
+  color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+  .seat .row--flex {
+    margin-bottom: 1rem;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1872,6 +1916,9 @@ input[type="range"]::-moz-range-thumb {
   .seat__item {
     width: 100%;
     margin-bottom: 4rem;
+  }
+  .seat .right-seat .seat__row--right {
+    left: -13rem;
   }
 }
 
@@ -1920,5 +1967,15 @@ input[type="range"]::-moz-range-thumb {
   }
   .seat .right-seat {
     margin: 0;
+  }
+  .seat .right-seat .seat__row--right {
+    left: -12rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .seat .right-seat .seat__row--right {
+    left: -8rem;
+    width: 8rem;
   }
 }
