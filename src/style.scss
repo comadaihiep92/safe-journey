@@ -1639,10 +1639,16 @@ input[type="range"]::-moz-range-thumb {
   .review__box .active {
     transform: scale(1);
   }
+  .search__container {
+    padding: 3.2rem 1rem;
+  }
 }
 @media only screen and (max-width: 400px) {
   .btn {
     width: 100%;
+  }
+  .icon--arrival {
+    width: 8rem;
   }
 }
 // seat
@@ -2013,5 +2019,14 @@ input[type="range"]::-moz-range-thumb {
     padding: 0;
     margin: 0;
     border: none;
+  }
+  .box__type {
+    width: 100%;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+  }
+  .box .input-box,
+  .box .input {
+    width: 100%;
   }
 }
