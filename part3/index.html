@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Safe-Journey</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <header class="header container">
+          <nav class="nav">
+            <div class="logo"><a href="javascript:void(0)"><img src="img/logo.png"/></a></div>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link nav__link--active" href="javascript:void(0)">Home</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">About Us</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Compare Prices</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Booking Status</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="row row--bg">
+        <div class="banner container">
+          <h1 class="banner__title">Compare Prices. Book Tickets. Send Luggage</h1>
+          <p class="banner__desc">Search Through 15,802 Buses Across Nigeria & Ghana</p>
+          <div class="box">
+            <div class="box__type">
+              <input class="box__tab tab1" type="radio" checked="checked" name="tab-radio" id="tab1"/>
+              <label class="label-tab" for="tab1">One way</label>
+              <!--.box--active-->
+              <input class="box__tab tab2" type="radio" name="tab-radio" id="tab2"/>
+              <label class="label-tab" for="tab2">Round trip</label>
+              <div class="box__container">
+                <div class="box__date content1">
+                  <div class="input-box">
+                    <label for="park"></label>
+                    <input class="input input1" type="text" placeholder="Search by State &amp; Park" id="park"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="state"></label>
+                    <input class="input input2" type="text" placeholder="To State" id="state"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="date"></label><span class="icon3"></span>
+                    <input class="input input3" type="text" placeholder="Departure Date" onfocus="(this.type='date')" id="date"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="seat"></label>
+                    <input class="input input4" type="text" placeholder="No of Seat" id="seat"/>
+                  </div>
+                </div>
+                <div class="box__date content2">
+                  <div class="input-box">
+                    <label for="park"></label>
+                    <input class="input input1" type="text" placeholder="Search by State &amp; Park" id="park"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="state"></label>
+                    <input class="input input2" type="text" placeholder="To State" id="state"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="date"></label><span class="icon3"></span>
+                    <input class="input input3" type="text" placeholder="Departure Date" onfocus="(this.type='date')" id="date"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="date"></label><span class="icon3"></span>
+                    <input class="input input3" type="text" placeholder="Arrival Date" onfocus="(this.type='date')" id="date"/>
+                  </div>
+                  <div class="input-box">
+                    <label for="seat"></label>
+                    <input class="input input4" type="text" placeholder="No of Seat" id="seat"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="btn__search">Search Bus</button><img src="img/icon-arrow-white.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row__relative">
+        <div class="row--info"></div>
+        <div class="info container">
+          <div class="info__box">
+            <button class="info__title">
+              <h1>COMPARE PRICES FARE</h1>
+            </button>
+            <div class="info__num">
+              <p>3+</p>
+            </div>
+            <div class="info__desc">
+              <p>No of Countries<br/>Reached</p>
+            </div>
+          </div>
+          <div class="info__box">
+            <button class="info__title">
+              <h1>CHARTER VEHICLE</h1>
+            </button>
+            <div class="info__num">
+              <p>5,892+</p>
+            </div>
+            <div class="info__desc">
+              <p>No of Bus<br/>Routes</p>
+            </div>
+          </div>
+          <div class="info__box">
+            <button class="info__title">
+              <h1>SEND LUGGAGES</h1>
+            </button>
+            <div class="info__num">
+              <p>10+</p>
+            </div>
+            <div class="info__desc">
+              <p>No of<br/>Transporters</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="top container">
+          <div class="top__title">
+            <div class="top__left">
+              <h2>Top Route</h2>
+            </div>
+            <div class="top__right">
+              <ul>
+                <li><a href="javascript:void(0)"><img src="img/icon-back.png" alt=""/></a></li>
+                <li><a class="active" href="javascript:void(0)"><img src="img/icon-next.png" alt=""/></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="top__box">
+            <div class="top__item">
+              <div class="img"><img src="img/img-book1.jpg" alt=""/></div>
+              <p>Lagos - Enugu</p>
+              <div class="book"><a href="javascript:void(0)">BOOK NOW</a></div>
+            </div>
+            <div class="top__item">
+              <div class="img"><img src="img/img-book2.jpg" alt=""/></div>
+              <p>Abuja - Lagos</p>
+              <div class="book"><a href="javascript:void(0)">BOOK NOW</a></div>
+            </div>
+            <div class="top__item">
+              <div class="img"><img src="img/img-book3.jpg" alt=""/></div>
+              <p>Lagos - Kano</p>
+              <div class="book"><a href="javascript:void(0)">BOOK NOW</a></div>
+            </div>
+          </div>
+          <div class="top__pagination">
+            <ul>
+              <li class="pagi active"><a href="javascript:void(0)"></a></li>
+              <li class="pagi"><a href="javascript:void(0)"></a></li>
+              <li class="pagi"><a href="javascript:void(0)"></a></li>
+              <li class="pagi"><a href="javascript:void(0)"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="download container">
+          <div class="download__left">
+            <h2>Download Our Mobile App</h2>
+            <p>Booking your trip is just a touch away. With our mobile app, you can book anytime on the go.</p>
+            <div class="download__box">
+              <div class="img"><img src="img/chplay.png" alt=""/></div>
+              <div class="img"><img src="img/apple.png" alt=""/></div>
+            </div>
+          </div>
+          <div class="download__right">
+            <div class="img"><img src="img/iphone.png" alt=""/></div>
+            <div class="img"><img src="img/Note15.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="review container">
+          <div class="top__title">
+            <div class="top__left">
+              <h2>What our clients are saying about<br/>safe journey.</h2>
+            </div>
+            <div class="top__right">
+              <ul>
+                <li><a href="javascript:void(0)"><img src="img/icon-back.png" alt=""/></a></li>
+                <li><a class="active" href="javascript:void(0)"><img src="img/icon-next.png" alt=""/></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="review__box">
+            <div class="review__item">
+              <div class="review__star">
+                <ul>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star.png" alt=""/></a></li>
+                </ul>
+              </div>
+              <div class="review__text">
+                <p>"Last December, on the 22nd, my beautiful wife and daughter travelled to Ghana to see our uncle in Accra, she was a bit scared going by road instead of flying but the way your customer care (Esther) spoke to us, calmed her down and we had a beautiful time booking & travelling with your platform! Una Try oh!!"</p>
+              </div>
+              <div class="review__author">
+                <div class="author__avata"><img src="img/ava1.png" alt=""/></div>
+                <div class="author__info">
+                  <div class="author__name">
+                    <h3>AUSTIN</h3>
+                  </div>
+                  <div class="author__address">
+                    <p>AGBOR, DELTA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review__item">
+              <div class="review__star">
+                <ul>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                </ul>
+              </div>
+              <div class="review__text">
+                <p>"I had never heard of your company till my friend told me about it this year. I was trying to get a cheap bus from PH to lag as a student na, lol... Anyways, I am glad I did because I met someone special on my way. Thank God for my friend & your company too"</p>
+              </div>
+              <div class="review__author">
+                <div class="author__avata"><img src="img/ava2.png" alt=""/></div>
+                <div class="author__info">
+                  <div class="author__name">
+                    <h3>SANDRA K</h3>
+                  </div>
+                  <div class="author__address">
+                    <p>PortHarcourt</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review__item active">
+              <div class="review__star">
+                <ul>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                  <li><a href="javascript:void(0)"><img src="img/icon-star-yellow.png" alt=""/></a></li>
+                </ul>
+              </div>
+              <div class="review__text">
+                <p>"My husband was returning from the States for our 5th wedding anniversary, so our church RCCG decided at the last minute to surprise him at the airport. We were lost and needed to charter a vehicle when God sent us your advert on my bible app!! Long story short, it was our best anniversary till date. God bless."</p>
+              </div>
+              <div class="review__author">
+                <div class="author__avata"><img src="img/ava3.png" alt=""/></div>
+                <div class="author__info">
+                  <div class="author__name">
+                    <h3>MRS. BRIFO</h3>
+                  </div>
+                  <div class="author__address">
+                    <p>KUMASI, GHANA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ads container">
+          <div class="ads__bg"></div>
+          <div class="ads__list">
+            <div class="ads__item"><img src="img/logo1.png" alt=""/></div>
+            <div class="ads__item"><img src="img/logo2.png" alt=""/></div>
+            <div class="ads__item"><img src="img/logo3.png" alt=""/></div>
+            <div class="ads__item"><img src="img/logo4.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <footer class="footer container">
+          <div class="footer__list">
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>MENU LISTS</h2>
+              </div>
+              <ul class="footer__box">
+                <li><a href="javascript:void(0)">About us</a></li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                <li><a href="javascript:void(0)">Cargo</a></li>
+                <li><a href="javascript:void(0)">FAQ’S</a></li>
+                <li><a href="javascript:void(0)">Charter Service</a></li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>CONTACT US</h2>
+              </div>
+              <div class="footer__box">
+                <p>Get through to us via our social media platform below. Instagram , Twitter and Facebook.</p>
+                <ul class="social">
+                  <li class="social__img"><a><img src="img/icon-ins.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-twitter.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-facebook.png" alt=""/></a></li>
+                </ul>
+                <p>We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.</p>
+                <div class="contact">
+                  <div class="contact__img"><img src="img/icon-phone.png" alt=""/></div>
+                  <p>09076555353</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>SEND A MESSAGE</h2>
+              </div>
+              <div class="footer__box">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Enter Email Address" id="email"/>
+                <label for="message">Message</label>
+                <input type="text" placeholder="Type Message Here" id="message"/>
+                <button id="submit">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
