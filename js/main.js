@@ -25,3 +25,43 @@ $("input[type=range]").mousemove(function (e) {
       "%, #f0f0f0 100%)"
   );
 });
+
+const range = document.getElementById("time"),
+  rangeV = document.getElementById("rangeTime"),
+  setValue = () => {
+    const newValue = Number(
+      ((range.value - range.min) * 100) / (range.max - range.min)
+    );
+    let newPosition = 10 - newValue * 0.1;
+    rangeV.innerHTML = `</span> <span class="icon icon--back-label"></span>
+    <label for="time">${range.value}:00</label><span class="icon icon--next-label"></span>`;
+
+    if (newValue > 50) {
+      newPosition = 10 + newValue * 1.2;
+      rangeV.style.left = `calc(${newValue}% - (${newPosition}px))`;
+    } else {
+      rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+    }
+    // rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+  };
+document.addEventListener("DOMContentLoaded", setValue);
+range.addEventListener("input", setValue);
+
+const money = document.getElementById("money"),
+  rangeMoney = document.getElementById("rangeMoney"),
+  setValue2 = () => {
+    const newValue2 = Number(
+      ((money.value - money.min) * 100) / (money.max - money.min)
+    );
+    let newPosition2 = 10 - newValue2 * 0.1;
+    rangeMoney.innerHTML = `</span> <span class="icon icon--back-label"></span>
+    <label for="money">₦${money.value},000</label><span class="icon icon--next-label"></span>`;
+    if (newValue2 > 50) {
+      newPosition2 = 10 + newValue2 * 1.5;
+      rangeMoney.style.left = `calc(${newValue2}% - (${newPosition2}px))`;
+    } else {
+      rangeMoney.style.left = `calc(${newValue2}% + (${newPosition2}px))`;
+    }
+  };
+document.addEventListener("DOMContentLoaded", setValue2);
+money.addEventListener("input", setValue2);

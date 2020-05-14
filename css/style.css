@@ -943,6 +943,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 4rem;
 }
 .departure__box-item {
   font-size: 1.6rem;
@@ -955,17 +956,19 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 3rem;
 }
 .departure__range--box {
-  width: 15.3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
+  position: absolute;
   padding: 1.5rem 2rem;
   background: #fff;
   box-shadow: 0px 10px 40px rgba(216, 216, 216, 0.5);
   border-radius: 5px;
+  top: -5rem;
 }
 .departure__range label {
   font-size: 1.6rem;
@@ -1431,8 +1434,7 @@ html {
 
 .range--custom {
   position: relative;
-  top: -3rem;
-  z-index: -1;
+  top: 1rem;
 }
 
 input[type=range] {
@@ -1903,6 +1905,10 @@ input[type=range]::-moz-range-thumb {
 
   .seat .right-seat .seat__row--right {
     left: -13rem;
+  }
+
+  .departure__item:first-child {
+    margin-bottom: 7rem;
   }
 }
 @media only screen and (max-width: 768px) {

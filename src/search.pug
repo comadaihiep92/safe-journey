@@ -76,22 +76,22 @@ html(lang="en")
                                 .departure__box-item 00:00
                                 .departure__box-item 24:00
                             .departure__range
-                                .departure__range--box
+                                .departure__range--box#rangeTime
                                     span.icon.icon--back-label
                                     label(for="time") 09:00
                                     span.icon.icon--next-label
-                                input(type="range" id="time" class="range--custom" min="1" max="100" step="1" value="45")
+                                input(type="range" id="time" class="range--custom" min="1" max="24" step="1" value="11")
                         .departure__item
                             p.departure__title Price Range
                             .departure__box
                                 .departure__box-item ₦20,000
                                 .departure__box-item ₦150,000
                             .departure__range
-                                .departure__range--box
+                                .departure__range--box#rangeMoney
                                     span.icon.icon--back-label
                                     label(for="money") ₦80,000
                                     span.icon.icon--next-label
-                                input(type="range" id="money" class="range--custom" min="1" max="100" step="1" value="45")
+                                input(type="range" id="money" class="range--custom" min="20" max="150" step="2" value="78")
                     .result
                         .result__top
                             h3.item__title Search Result

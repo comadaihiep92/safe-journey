@@ -983,6 +983,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4rem;
     &-item {
       font-size: 1.6rem;
       line-height: 1.9rem;
@@ -995,16 +996,19 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 3rem;
     &--box {
-      width: 15.3rem;
+      // width: 15.3rem;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      position: relative;
+      position: absolute;
       padding: 1.5rem 2rem;
       background: #fff;
       box-shadow: 0px 10px 40px rgba(216, 216, 216, 0.5);
       border-radius: 5px;
+      top: -5rem;
     }
     label {
       font-size: 1.6rem;
@@ -1465,9 +1469,10 @@ html {
 }
 .range--custom {
   position: relative;
-  top: -3rem;
-  z-index: -1;
+  top: 1rem;
+  // z-index: -1;
 }
+
 input[type="range"] {
   -webkit-appearance: none;
   -moz-apperance: none;
@@ -1481,14 +1486,6 @@ input[type="range"] {
     color-stop(0.444444, rgb(18, 111, 178)),
     color-stop(0.444444, rgb(240, 240, 240))
   );
-
-  // background-image: -webkit-gradient(
-  //   linear,
-  //   left top,
-  //   right top,
-  //   color-stop(15%, #126fb2),
-  //   color-stop(15%, #f0f0f0)
-  // );
 
   background-image: -moz-linear-gradient(
     left center,
@@ -1951,6 +1948,9 @@ input[type="range"]::-moz-range-thumb {
   }
   .seat .right-seat .seat__row--right {
     left: -13rem;
+  }
+  .departure__item:first-child {
+    margin-bottom: 7rem;
   }
 }
 
