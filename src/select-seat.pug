@@ -50,7 +50,7 @@ html(lang="en")
                                 span.search__number 5
                                 | Payment
                     .seat
-                        .seat__item.seat__available
+                        .seat__item.hidden.seat__available
                             h3.item__title 51 available seat
                             p.item__desc Click on seat Select/Deselect
                             .seat__content
@@ -382,6 +382,45 @@ html(lang="en")
                                         li
                                             span.icon.icon--reserved
                                             span.text--seat reserved seat
+                        .seat__item.seat__available
+                            h3.item__title PASSENGER INFORMATION
+                            p.item__desc.hidden2 .
+
+                            .seat__content.custom__seat-content
+                                .form
+                                    h1.form__title Enter Passenger Infomation
+                                    .form__row
+                                        label.form__label(for="name") Full Name
+                                        input.form__input#name(type="text" placeholder="Enter Full Name")
+                                    .form__row
+                                        label.form__label(for="phone") Phone Number
+                                        input.form__input#phone(type="tel" placeholder="Enter Phone Number")
+                                    .form__row
+                                        label.form__label(for="email") Email
+                                        input.form__input#email(type="email" placeholder="Enter Email Address")
+                                .form
+                                    h1.form__title Enter Next of Kin Infomation
+                                    .form__row
+                                        label.form__label(for="kinName") Next of Kin Full Name
+                                        input.form__input#kinName(type="text" placeholder="Enter Full Name")
+                                    .form__row
+                                        label.form__label(for="kinPhone") Next of Kin Phone Number
+                                        input.form__input#kinPhone(type="tel" placeholder="Enter Phone Number")
+                                    .form__row
+                                        label.form__label(for="kinBirth") Date of Birth
+                                        input.form__input#kinBirth(type="date" placeholder="DD-MM-YYYY")
+                                    .form__row
+                                        label.form__label(for="kinEmail") Next of Kin Email
+                                         input.form__input#kinEmail(type="email" placeholder="Enter Email Address")
+                                    .form__row
+                                        label.form__label(for="kinGender") Gender
+                                        input.form__input#kinGender(list="genders" type="text" placeholder="Select Gender")
+                                        //- <input list="browsers" name="browser" id="browser">
+                                        datalist#genders
+                                            option(value="Male")
+                                            option(value="Female")
+
+
                         .seat__item.seat__summary
                             h3.item__title 51 available seat
                             p.item__desc Click on seat Select/Deselect
@@ -430,6 +469,47 @@ html(lang="en")
                                                     li
                                                         span.icon.icon--wifi
                                                         a(href="#") FREE WIFI
+                                //- new here
+                                .summary__item
+                                    span
+                                    //- span.left--line.line--dashed
+                                    .summary__transport.padding3
+                                        p.line-text Passenger Information
+                                .summary__item
+                                    span.left--line
+                                    .summary__duration.padding3
+
+                                        .summary__duration2
+                                            .summary__duration2-item
+                                                h3 Passenger’s Full Name
+                                                p Ampitan Adewole
+                                            .summary__duration2-item
+                                                h3 Phone Number
+                                                p 08142811138
+                                        .summary__duration2
+                                            .summary__duration2-item
+                                                h3 Email Address
+                                                p ampitanade@gmail.com
+
+                                        .summary__duration2
+                                            .summary__duration2-item
+                                                h3 Next of Kin Full Name
+                                                p Adeolu Ademola
+                                            .summary__duration2-item
+                                                h3 Next of Kin Phone Number
+                                                p 08142781293
+                                        .summary__duration2
+                                            .summary__duration2-item
+                                                h3 Next of Kin Email Address
+                                                p ademolaade@gmail.com
+                                            .summary__duration2-item
+                                                h3 Next of Date of Birth
+                                                p 11-04-1990
+                                        .summary__duration2
+                                            .summary__duration2-item
+                                                h3 Gender
+                                                p Male
+
                                 .summary__item.seat-column.padding3
                                     h3.seat__titleh3 Fare Rule
                                     ul

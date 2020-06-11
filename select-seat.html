@@ -33,7 +33,7 @@
             <li class="search__step"><a class="search__link" href="#"><span class="search__number">5</span>Payment</a></li>
           </ul>
           <div class="seat">
-            <div class="seat__item seat__available">
+            <div class="seat__item hidden seat__available">
               <h3 class="item__title">51 available seat</h3>
               <p class="item__desc">Click on seat Select/Deselect</p>
               <div class="seat__content">
@@ -366,6 +366,55 @@
                 </div>
               </div>
             </div>
+            <div class="seat__item seat__available">
+              <h3 class="item__title">PASSENGER INFORMATION</h3>
+              <p class="item__desc hidden2">.</p>
+              <div class="seat__content custom__seat-content">
+                <div class="form">
+                  <h1 class="form__title">Enter Passenger Infomation</h1>
+                  <div class="form__row">
+                    <label class="form__label" for="name">Full Name</label>
+                    <input class="form__input" id="name" type="text" placeholder="Enter Full Name"/>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__label" for="phone">Phone Number</label>
+                    <input class="form__input" id="phone" type="tel" placeholder="Enter Phone Number"/>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__label" for="email">Email</label>
+                    <input class="form__input" id="email" type="email" placeholder="Enter Email Address"/>
+                  </div>
+                </div>
+                <div class="form">
+                  <h1 class="form__title">Enter Next of Kin Infomation</h1>
+                  <div class="form__row">
+                    <label class="form__label" for="kinName">Next of Kin Full Name</label>
+                    <input class="form__input" id="kinName" type="text" placeholder="Enter Full Name"/>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__label" for="kinPhone">Next of Kin Phone Number</label>
+                    <input class="form__input" id="kinPhone" type="tel" placeholder="Enter Phone Number"/>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__label" for="kinBirth">Date of Birth</label>
+                    <input class="form__input" id="kinBirth" type="date" placeholder="DD-MM-YYYY"/>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__label" for="kinEmail">Next of Kin Email
+                      <input class="form__input" id="kinEmail" type="email" placeholder="Enter Email Address"/>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__label" for="kinGender">Gender</label>
+                    <input class="form__input" id="kinGender" list="genders" type="text" placeholder="Select Gender"/>
+                    <datalist id="genders">
+                      <option value="Male"></option>
+                      <option value="Female"></option>
+                    </datalist>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="seat__item seat__summary">
               <h3 class="item__title">51 available seat</h3>
               <p class="item__desc">Click on seat Select/Deselect</p>
@@ -415,6 +464,57 @@
                           <li><span class="icon icon--ac"></span><a href="#">AC</a></li>
                           <li><span class="icon icon--wifi"></span><a href="#">FREE WIFI</a></li>
                         </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="summary__item"><span></span>
+                  <div class="summary__transport padding3">
+                    <p class="line-text">Passenger Information</p>
+                  </div>
+                </div>
+                <div class="summary__item"><span class="left--line"></span>
+                  <div class="summary__duration padding3">
+                    <div class="summary__duration2">
+                      <div class="summary__duration2-item">
+                        <h3>Passenger’s Full Name</h3>
+                        <p>Ampitan Adewole</p>
+                      </div>
+                      <div class="summary__duration2-item">
+                        <h3>Phone Number</h3>
+                        <p>08142811138</p>
+                      </div>
+                    </div>
+                    <div class="summary__duration2">
+                      <div class="summary__duration2-item">
+                        <h3>Email Address</h3>
+                        <p>ampitanade@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="summary__duration2">
+                      <div class="summary__duration2-item">
+                        <h3>Next of Kin Full Name</h3>
+                        <p>Adeolu Ademola</p>
+                      </div>
+                      <div class="summary__duration2-item">
+                        <h3>Next of Kin Phone Number</h3>
+                        <p>08142781293</p>
+                      </div>
+                    </div>
+                    <div class="summary__duration2">
+                      <div class="summary__duration2-item">
+                        <h3>Next of Kin Email Address</h3>
+                        <p>ademolaade@gmail.com</p>
+                      </div>
+                      <div class="summary__duration2-item">
+                        <h3>Next of Date of Birth</h3>
+                        <p>11-04-1990</p>
+                      </div>
+                    </div>
+                    <div class="summary__duration2">
+                      <div class="summary__duration2-item">
+                        <h3>Gender</h3>
+                        <p>Male</p>
                       </div>
                     </div>
                   </div>

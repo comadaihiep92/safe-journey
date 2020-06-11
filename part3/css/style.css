@@ -520,7 +520,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 5.2rem 10rem !important;
+  padding: 5.2rem 10rem;
   background: #126fb2;
   height: 100%;
 }
@@ -943,6 +943,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 4rem;
 }
 .departure__box-item {
   font-size: 1.6rem;
@@ -955,17 +956,19 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 3rem;
 }
 .departure__range--box {
-  width: 15.3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
+  position: absolute;
   padding: 1.5rem 2rem;
   background: #fff;
   box-shadow: 0px 10px 40px rgba(216, 216, 216, 0.5);
   border-radius: 5px;
+  top: -5rem;
 }
 .departure__range label {
   font-size: 1.6rem;
@@ -1292,6 +1295,7 @@ html {
 }
 
 .icon--arrival {
+  box-sizing: border-box;
   width: 29.5rem;
   height: 36px;
   padding: 0 10px;
@@ -1325,7 +1329,18 @@ html {
   width: 4rem;
   height: 3.7rem;
   background: url("../img/icon-seat.png") no-repeat center center;
-  box-shadow: 0px 12.5px 25px rgba(216, 216, 216, 0.85);
+}
+
+.icon--book1 {
+  background: url("../img/img-seat-booked-smal.png") no-repeat center center;
+  transform: rotate(90deg);
+  color: red;
+}
+
+.icon--reserved1 {
+  background: url("../img/img-seat-reserved-small.png") no-repeat center center;
+  transform: rotate(90deg);
+  color: red;
 }
 
 .icon--nonseat {
@@ -1387,6 +1402,7 @@ html {
   width: unset;
   height: unset;
   margin-left: 3.4rem;
+  box-sizing: border-box;
 }
 .btn--result {
   width: unset;
@@ -1413,12 +1429,12 @@ html {
   line-height: 1.6rem;
   color: #ffffff;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .range--custom {
   position: relative;
-  top: -3rem;
-  z-index: -1;
+  top: 1rem;
 }
 
 input[type=range] {
@@ -1564,6 +1580,43 @@ input[type=range]::-moz-range-thumb {
   .rule {
     padding: 4rem 3.3rem;
   }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .box {
+    padding: 0;
+  }
+
+  .info__box {
+    width: 100%;
+  }
+
+  .top__item {
+    width: 100%;
+  }
+
+  .footer {
+    padding-top: 4rem;
+  }
+
+  .review__box .active {
+    transform: scale(1);
+  }
+
+  .search__container {
+    padding: 3.2rem 1rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .btn {
+    width: 100%;
+  }
+
+  .icon--arrival {
+    width: 8rem;
+  }
 }
 .seat {
   display: flex;
@@ -1618,6 +1671,8 @@ input[type=range]::-moz-range-thumb {
   text-align: center;
   text-transform: uppercase;
   color: #000;
+  cursor: pointer;
+  padding: 1rem;
 }
 .seat__row {
   width: 100%;
@@ -1680,6 +1735,7 @@ input[type=range]::-moz-range-thumb {
   text-transform: uppercase;
   color: #4a4a4a;
   margin-left: 3.5rem;
+  text-align: center;
 }
 .seat .summary__item {
   width: 100%;
@@ -1810,7 +1866,31 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   justify-content: flex-start;
 }
+.seat .seat__row input {
+  display: none;
+}
+.seat .left-seat {
+  width: 100%;
+}
+.seat .right-seat {
+  position: relative;
+}
+.seat .right-seat .seat__row--right {
+  position: absolute;
+  left: -11rem;
+}
 
+.seat__item-bus input:checked ~ .icon--seat {
+  background: url("../img/img-seat-selected-smal.png") no-repeat center center;
+  transform: rotate(90deg);
+  color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+  .seat .row--flex {
+    margin-bottom: 1rem;
+  }
+}
 @media only screen and (max-width: 992px) {
   .seat {
     width: 100%;
@@ -1821,6 +1901,14 @@ input[type=range]::-moz-range-thumb {
   .seat__item {
     width: 100%;
     margin-bottom: 4rem;
+  }
+
+  .seat .right-seat .seat__row--right {
+    left: -13rem;
+  }
+
+  .departure__item:first-child {
+    margin-bottom: 7rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1861,7 +1949,6 @@ input[type=range]::-moz-range-thumb {
 
   .btn {
     flex-direction: column;
-    width: 100%;
   }
 
   .icon--arrival-small {
@@ -1879,6 +1966,38 @@ input[type=range]::-moz-range-thumb {
 
   .seat .right-seat {
     margin: 0;
+  }
+
+  .seat .right-seat .seat__row--right {
+    left: -12rem;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .seat .right-seat .seat__row--right {
+    left: -8rem;
+    width: 8rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .seat__content {
+    padding: 3rem 0;
+  }
+
+  .seat__top {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .box__type {
+    width: 100%;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .box .input-box,
+.box .input {
+    width: 100%;
   }
 }
 
