@@ -909,7 +909,7 @@ html {
       background: #126fb2;
       border: 1px solid #f1f1f1;
       border-radius: 3.3rem;
-      padding: 1.4rem;
+      padding: 1rem;
       span {
         background: #fff;
         padding: 1px 6px;
@@ -1418,6 +1418,7 @@ html {
   box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
   border-radius: 2px;
   cursor: pointer;
+
   &__search {
     background: none;
     outline: none;
@@ -1427,6 +1428,13 @@ html {
     letter-spacing: 0.155em;
     text-transform: uppercase;
     color: #ffffff;
+  }
+  &__continue {
+    background: linear-gradient(
+      90deg,
+      #126fb2 2.49%,
+      rgba(18, 111, 178, 0.68) 100%
+    );
   }
   &--white {
     padding: 2rem 5.3rem;
@@ -1656,6 +1664,7 @@ input[type="range"]::-moz-range-thumb {
   align-items: flex-start;
   box-sizing: border-box;
   margin-bottom: 4rem;
+
   &__item {
     width: 49%;
     height: 100%;
@@ -2035,7 +2044,15 @@ input[type="range"]::-moz-range-thumb {
   visibility: hidden;
 }
 .hidden {
-  display: none;
+  display: none !important;
+  transition: linear 0.3s;
+}
+.active {
+  display: block !important;
+  transition: linear 0.3s;
+}
+.flexShow {
+  display: flex;
 }
 .form {
   display: flex;
@@ -2077,4 +2094,8 @@ input[type="range"]::-moz-range-thumb {
 }
 #kinBirth {
   font-size: 1.7rem;
+}
+
+.seat__item {
+  transition: linear 0.5s;
 }

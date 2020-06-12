@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/jquery1.4.2.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -28,12 +29,12 @@
           <ul class="search__list-step">
             <li class="search__step"><a class="search__link" href="#"><span class="search__number">1</span>Search For Bus</a></li>
             <li class="search__step"><a class="search__link" href="#"><span class="search__number">2</span>Select Bus</a></li>
-            <li class="search__step"><a class="search__link active" href="#"><span class="search__number">3</span>Select Bus Seat</a></li>
-            <li class="search__step"><a class="search__link" href="#"><span class="search__number">4</span>Passengers Info</a></li>
+            <li class="search__step"><a class="search__link step3 active" href="#"><span class="search__number">3</span>Select Bus Seat</a></li>
+            <li class="search__step"><a class="search__link step4" href="#"><span class="search__number">4</span>Passengers Info</a></li>
             <li class="search__step"><a class="search__link" href="#"><span class="search__number">5</span>Payment</a></li>
           </ul>
           <div class="seat">
-            <div class="seat__item hidden seat__available">
+            <div class="seat__item seat__available active tab1">
               <h3 class="item__title">51 available seat</h3>
               <p class="item__desc">Click on seat Select/Deselect</p>
               <div class="seat__content">
@@ -366,7 +367,7 @@
                 </div>
               </div>
             </div>
-            <div class="seat__item seat__available">
+            <div class="seat__item seat__available tab2 hidden">
               <h3 class="item__title">PASSENGER INFORMATION</h3>
               <p class="item__desc hidden2">.</p>
               <div class="seat__content custom__seat-content">
@@ -468,12 +469,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="summary__item"><span></span>
+                <div class="summary__item tab hidden"><span></span>
                   <div class="summary__transport padding3">
                     <p class="line-text">Passenger Information</p>
                   </div>
                 </div>
-                <div class="summary__item"><span class="left--line"></span>
+                <div class="summary__item tab hidden"><span class="left--line"></span>
                   <div class="summary__duration padding3">
                     <div class="summary__duration2">
                       <div class="summary__duration2-item">
@@ -528,9 +529,7 @@
                     <li class="seat__descp">* Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.</li>
                   </ul>
                 </div>
-                <div class="btn">
-                  <button class="btn__search">CONTINUE</button><img src="img/icon-arrow-white.png"/>
-                </div>
+                <button class="btn btn__search btn__continue" id="continue">CONTINUE<img src="img/icon-arrow-white.png"/></button>
               </div>
             </div>
           </div>
@@ -574,8 +573,8 @@
                 <h2>SEND A MESSAGE</h2>
               </div>
               <div class="footer__box">
-                <label for="email">Email Address</label>
-                <input type="email" placeholder="Enter Email Address" id="email"/>
+                <label for="sendEmail">Email Address</label>
+                <input type="email" placeholder="Enter Email Address" id="sendEmail"/>
                 <label for="message">Message</label>
                 <input type="text" placeholder="Type Message Here" id="message"/>
                 <button id="submit">Send Message</button>
@@ -586,5 +585,6 @@
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/slider.js" type="text/javascript"></script>
   </body>
 </html>

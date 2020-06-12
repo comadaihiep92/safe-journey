@@ -7,6 +7,8 @@ html(lang="en")
         link(rel="stylesheet", href="css/reset.css")
         link(rel="stylesheet", href="css/style.css")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js')
+        script(src="js/jquery1.4.2.js" type="text/javascript")
+
 
     body
         .wrapper
@@ -38,11 +40,11 @@ html(lang="en")
                                 span.search__number 2
                                 | Select Bus
                         li.search__step
-                            a.search__link.active(href="#")
+                            a.search__link.step3.active(href="#")
                                 span.search__number 3
                                 | Select Bus Seat
                         li.search__step
-                            a.search__link(href="#")
+                            a.search__link.step4(href="#")
                                 span.search__number 4
                                 | Passengers Info
                         li.search__step
@@ -50,7 +52,7 @@ html(lang="en")
                                 span.search__number 5
                                 | Payment
                     .seat
-                        .seat__item.hidden.seat__available
+                        .seat__item.seat__available.active.tab1
                             h3.item__title 51 available seat
                             p.item__desc Click on seat Select/Deselect
                             .seat__content
@@ -382,7 +384,7 @@ html(lang="en")
                                         li
                                             span.icon.icon--reserved
                                             span.text--seat reserved seat
-                        .seat__item.seat__available
+                        .seat__item.seat__available.tab2.hidden
                             h3.item__title PASSENGER INFORMATION
                             p.item__desc.hidden2 .
 
@@ -470,12 +472,12 @@ html(lang="en")
                                                         span.icon.icon--wifi
                                                         a(href="#") FREE WIFI
                                 //- new here
-                                .summary__item
+                                .summary__item.tab.hidden
                                     span
                                     //- span.left--line.line--dashed
                                     .summary__transport.padding3
                                         p.line-text Passenger Information
-                                .summary__item
+                                .summary__item.tab.hidden
                                     span.left--line
                                     .summary__duration.padding3
 
@@ -517,8 +519,8 @@ html(lang="en")
                                         li.seat__descp * Refundable amount is calculated based on scheduled bus departure time from the first boarding time.
                                         li.seat__descp * Partial cancellation is not allowed for this ticket. Ticket cannot be cancelled after bus departure time
                                         li.seat__descp * Ticket cannot be cancelled after scehduled bus departure time from the first boarding point.
-                                .btn
-                                    button.btn__search CONTINUE
+                                button.btn.btn__search.btn__continue#continue CONTINUE
+
                                     img(src="img/icon-arrow-white.png")
             .row
                 footer.footer.container
@@ -561,11 +563,12 @@ html(lang="en")
                             .footer__title
                                 h2 SEND A MESSAGE
                             .footer__box
-                                label(for="email") Email Address
-                                input(type="email" placeholder="Enter Email Address")#email
+                                label(for="sendEmail") Email Address
+                                input(type="email" placeholder="Enter Email Address")#sendEmail
                                 label(for="message") Message
                                 input(type="text" placeholder="Type Message Here")#message
                                 button#submit Send Message
         script(src="js/main.js")
+        script(src="js/slider.js" type="text/javascript")
             //- .row
             //- .row

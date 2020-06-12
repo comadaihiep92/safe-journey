@@ -871,7 +871,7 @@ html {
   background: #126fb2;
   border: 1px solid #f1f1f1;
   border-radius: 3.3rem;
-  padding: 1.4rem;
+  padding: 1rem;
 }
 .search__link.active span {
   background: #fff;
@@ -1392,6 +1392,9 @@ html {
   letter-spacing: 0.155em;
   text-transform: uppercase;
   color: #ffffff;
+}
+.btn__continue {
+  background: linear-gradient(90deg, #126fb2 2.49%, rgba(18, 111, 178, 0.68) 100%);
 }
 .btn--white {
   padding: 2rem 5.3rem;
@@ -2006,7 +2009,17 @@ input[type=range]::-moz-range-thumb {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+  transition: linear 0.3s;
+}
+
+.active {
+  display: block !important;
+  transition: linear 0.3s;
+}
+
+.flexShow {
+  display: flex;
 }
 
 .form {
@@ -2050,6 +2063,10 @@ input[type=range]::-moz-range-thumb {
 
 #kinBirth {
   font-size: 1.7rem;
+}
+
+.seat__item {
+  transition: linear 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
