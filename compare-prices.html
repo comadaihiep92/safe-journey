@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Safe-Journey</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <header class="header container">
+          <nav class="nav">
+            <div class="logo"><a href="/index.html"><img src="img/logo.png"/></a></div>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Home</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">About Us</a></li>
+              <li class="nav__item"><a class="nav__link nav__link--active" href="/compare-prices.html">Compare Prices</a></li>
+              <li class="nav__item"><a class="nav__link" href="javascript:void(0)">Booking Status</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="row">
+        <div class="search container">
+          <div class="box search__box">
+            <div class="box__container search__container">
+              <div class="box__date content1 flex around">
+                <div class="input-box no-margin">
+                  <label for="park"></label><span class="icon3 icon--place"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="Lagos (LOS)" id="park"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="state"></label><span class="icon3 icon--place"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="EDO (BENIN)" id="state"/>
+                </div>
+                <div class="input-box no-margin">
+                  <label for="date"></label><span class="icon3"></span>
+                  <input class="input input3 no-radius" type="text" placeholder="Departure Date" onfocus="(this.type='date')" id="date"/>
+                </div>
+                <div class="btn btn--search btn--white">Search</div>
+              </div>
+            </div>
+          </div>
+          <div class="result">
+            <div class="result__top">
+              <h3 class="item__title">COMPARE  PRICES  Result</h3><span class="result__title">FILTER</span><span class="icon icon--list"></span>
+            </div>
+            <div class="result__bottom">
+              <div class="result__filter filter">
+                <h3 class="filter__title">FILTERING</h3>
+                <div class="filter__item">
+                  <p class="filter__text">PRICE</p>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="price1" type="checkbox" name="price1"/>
+                    <label class="filter__label" for="price1">Cheapest to Highest</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="price2" type="checkbox" name="price2"/>
+                    <label class="filter__label" for="price2">Highest to Cheapest</label>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <p class="filter__text">TRANSPORT COMPANY</p>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans1" type="checkbox" name="trans1"/>
+                    <label class="filter__label" for="trans1">E. Ekesons Motors</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans2" type="checkbox" name="trans2"/>
+                    <label class="filter__label" for="trans2">Okeyson Motors</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans3" type="checkbox" name="trans3"/>
+                    <label class="filter__label" for="trans3">Peace Mass Transit</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans4" type="checkbox" name="trans4"/>
+                    <label class="filter__label" for="trans4">Welfare Transport</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans5" type="checkbox" name="trans5"/>
+                    <label class="filter__label" for="trans5">Calculux Motors</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans6" type="checkbox" name="trans6"/>
+                    <label class="filter__label" for="trans6">Dugbe Transport</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans7" type="checkbox" name="trans7"/>
+                    <label class="filter__label" for="trans7">J’ae Transport</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans8" type="checkbox" name="trans8"/>
+                    <label class="filter__label" for="trans8">Efex Executive Transport</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans9" type="checkbox" name="trans9"/>
+                    <label class="filter__label" for="trans9">Anyaloko Transport</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="trans10" type="checkbox" name="trans10"/>
+                    <label class="filter__label" for="trans10">Pacpin Transport</label>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <p class="filter__text">ROUTE BY PARK (lagos State)</p>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="route1" type="checkbox" name="route1"/>
+                    <label class="filter__label" for="route1">Ajah Terminal</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="route2" type="checkbox" name="route2"/>
+                    <label class="filter__label" for="route2">Jibowu Terminal</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="route3" type="checkbox" name="route3"/>
+                    <label class="filter__label" for="route3">Maza Maza Terminal</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="route4" type="checkbox" name="route4"/>
+                    <label class="filter__label" for="route4">Iyana Ipaja Terminal</label>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <p class="filter__text">TAKE OFF TIME (MORNING - EVENING)</p>
+                  <div class="departure filter__dep">
+                    <div class="departure__item filter__dep-item">
+                      <div class="departure__box">
+                        <div class="departure__box-item">00:00</div>
+                        <div class="departure__box-item">16:00</div>
+                      </div>
+                      <div class="departure__range">
+                        <div class="departure__range--box" id="rangeTime"><span class="icon icon--back-label"></span>
+                          <label for="time">09:00</label><span class="icon icon--next-label"></span>
+                        </div>
+                        <input class="range--custom" type="range" id="time" min="0" max="16" step="1" value="7"/>
+                      </div>
+                    </div>
+                    <div class="departure__item filter__dep-item">
+                      <div class="departure__box">
+                        <div class="departure__box-item">16:00</div>
+                        <div class="departure__box-item">24:00</div>
+                      </div>
+                      <div class="departure__range">
+                        <div class="departure__range--box" id="rangeMoney"><span class="icon icon--back-label"></span>
+                          <label for="money">19:00</label><span class="icon icon--next-label"></span>
+                        </div>
+                        <input class="range--custom" type="range" id="money" min="16" max="24" step="1" value="20"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <p class="filter__text">tYPE OF VEHICLE</p>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type1" type="checkbox" name="type1"/>
+                    <label class="filter__label" for="type1">Toyota Hiace</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type2" type="checkbox" name="type2"/>
+                    <label class="filter__label" for="type2">Jet Mover</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type3" type="checkbox" name="type3"/>
+                    <label class="filter__label" for="type3">Sienna Bus</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type4" type="checkbox" name="type4"/>
+                    <label class="filter__label" for="type4">Toyota Corolla</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type5" type="checkbox" name="type5"/>
+                    <label class="filter__label" for="type5">Luxurious Bus (39 Seater )</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type6" type="checkbox" name="type6"/>
+                    <label class="filter__label" for="type6">Luxurious Bus Regular ( 45 Seater )</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type7" type="checkbox" name="type7"/>
+                    <label class="filter__label" for="type7">Luxurious Bus VIP  ( 45 Seater )</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type8" type="checkbox" name="type8"/>
+                    <label class="filter__label" for="type8">Luxurious Bus Regular ( 55 Seaters )</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="type9" type="checkbox" name="type9"/>
+                    <label class="filter__label" for="type9">Luxurious Bus VIP ( 55 Seaters )</label>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <p class="filter__text">BUS FEATURES</p>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="bus1" type="checkbox" name="bus1"/>
+                    <label class="filter__label" for="bus1">A/C</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="bus2" type="checkbox" name="bus2"/>
+                    <label class="filter__label" for="bus2">Non A/C</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="bus3" type="checkbox" name="bus3"/>
+                    <label class="filter__label" for="bus3">WIFI</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="bus4" type="checkbox" name="bus4"/>
+                    <label class="filter__label" for="bus4">Leg Room</label>
+                  </div>
+                  <div class="filter__checkbox">
+                    <input class="filter__input" id="bus5" type="checkbox" name="bus5"/>
+                    <label class="filter__label" for="bus5">USB Charging Port</label>
+                  </div>
+                </div>
+                <button class="filter__button"><img class="filter__img" src="./img/icon-filter.png" alt=""/>Filter</button>
+              </div>
+              <div class="result__list">
+                <div class="result__col">
+                  <div class="result__box result__box--new">
+                    <div class="result__item result__img"><img src="img/bus1.png" alt=""/></div>
+                    <div class="result__item result__time">
+                      <div class="result__row">
+                        <p class="row--title">Departure</p>
+                        <p class="row--title">Arrival</p>
+                      </div>
+                      <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                      <div class="result__row">
+                        <p class="row--time row--padding">16:00</p>
+                        <p class="row--time row--padding">09:45</p>
+                      </div>
+                      <div class="result__row">
+                        <p class="row--date row--padding">12 Jan</p>
+                        <p class="row--date row--padding">13 Jan</p>
+                      </div>
+                    </div>
+                    <div class="result__item result__info">
+                      <ul class="result__service">
+                        <li><a href="#">14 Seaters Arrival</a></li>
+                        <li><a href="#">4.3 Rating</a></li>
+                        <li><a href="#">Fare Rule</a></li>
+                        <li><a href="#">Amenities</a></li>
+                      </ul>
+                    </div>
+                    <div class="result__item result__price">
+                      <div class="result__price-box">
+                        <p class="result__price-title">N80,000</p>
+                        <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="/select-seat.html">Select</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__rate">
+                    <ul>
+                      <li>14 Seaters</li>
+                      <li>4.3 Rating</li>
+                      <li>Fare Rule</li>
+                      <li>Amenities</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="result__col">
+                  <div class="result__box result__box--new">
+                    <div class="result__item result__img"><img src="img/bus2.png" alt=""/></div>
+                    <div class="result__item result__time">
+                      <div class="result__row">
+                        <p class="row--title">Departure</p>
+                        <p class="row--title">Arrival</p>
+                      </div>
+                      <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                      <div class="result__row">
+                        <p class="row--time row--padding">16:00</p>
+                        <p class="row--time row--padding">09:45</p>
+                      </div>
+                      <div class="result__row">
+                        <p class="row--date row--padding">12 Jan</p>
+                        <p class="row--date row--padding">13 Jan</p>
+                      </div>
+                    </div>
+                    <div class="result__item result__info">
+                      <ul class="result__service">
+                        <li><a href="#">14 Seaters Arrival</a></li>
+                        <li><a href="#">4.3 Rating</a></li>
+                        <li><a href="#">Fare Rule</a></li>
+                        <li><a href="#">Amenities</a></li>
+                      </ul>
+                    </div>
+                    <div class="result__item result__price">
+                      <div class="result__price-box">
+                        <p class="result__price-title">N80,000</p>
+                        <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="/select-seat.html">Select</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__rate">
+                    <ul>
+                      <li>14 Seaters</li>
+                      <li>4.3 Rating</li>
+                      <li>Fare Rule</li>
+                      <li>Amenities</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="result__col">
+                  <div class="result__box result__box--new">
+                    <div class="result__item result__img"><img src="img/bus3.png" alt=""/></div>
+                    <div class="result__item result__time">
+                      <div class="result__row">
+                        <p class="row--title">Departure</p>
+                        <p class="row--title">Arrival</p>
+                      </div>
+                      <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                      <div class="result__row">
+                        <p class="row--time row--padding">16:00</p>
+                        <p class="row--time row--padding">09:45</p>
+                      </div>
+                      <div class="result__row">
+                        <p class="row--date row--padding">12 Jan</p>
+                        <p class="row--date row--padding">13 Jan</p>
+                      </div>
+                    </div>
+                    <div class="result__item result__info">
+                      <ul class="result__service">
+                        <li><a href="#">14 Seaters Arrival</a></li>
+                        <li><a href="#">4.3 Rating</a></li>
+                        <li><a href="#">Fare Rule</a></li>
+                        <li><a href="#">Amenities</a></li>
+                      </ul>
+                    </div>
+                    <div class="result__item result__price">
+                      <div class="result__price-box">
+                        <p class="result__price-title">N80,000</p>
+                        <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="/select-seat.html">Select</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__rate">
+                    <ul>
+                      <li>14 Seaters</li>
+                      <li>4.3 Rating</li>
+                      <li>Fare Rule</li>
+                      <li>Amenities</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="result__col">
+                  <div class="result__box result__box--new">
+                    <div class="result__item result__img"><img src="img/img-jet.png" alt=""/></div>
+                    <div class="result__item result__time">
+                      <div class="result__row">
+                        <p class="row--title">Departure</p>
+                        <p class="row--title">Arrival</p>
+                      </div>
+                      <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                      <div class="result__row">
+                        <p class="row--time row--padding">16:00</p>
+                        <p class="row--time row--padding">09:45</p>
+                      </div>
+                      <div class="result__row">
+                        <p class="row--date row--padding">12 Jan</p>
+                        <p class="row--date row--padding">13 Jan</p>
+                      </div>
+                    </div>
+                    <div class="result__item result__info">
+                      <ul class="result__service">
+                        <li><a href="#">14 Seaters Arrival</a></li>
+                        <li><a href="#">4.3 Rating</a></li>
+                        <li><a href="#">Fare Rule</a></li>
+                        <li><a href="#">Amenities</a></li>
+                      </ul>
+                    </div>
+                    <div class="result__item result__price">
+                      <div class="result__price-box">
+                        <p class="result__price-title">N80,000</p>
+                        <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="/select-seat.html">Select</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__rate">
+                    <ul>
+                      <li>14 Seaters</li>
+                      <li>4.3 Rating</li>
+                      <li>Fare Rule</li>
+                      <li>Amenities</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="result__col">
+                  <div class="result__box result__box--new">
+                    <div class="result__item result__img"><img src="img/img-camry.png" alt=""/></div>
+                    <div class="result__item result__time">
+                      <div class="result__row">
+                        <p class="row--title">Departure</p>
+                        <p class="row--title">Arrival</p>
+                      </div>
+                      <div class="result__row"><span class="row--address row--padding">LAG</span><span class="row--address row--flex"><span class="icon icon--arrival"></span><span class="row--mini-time">1hr 20 mins</span></span><span class="row--address row--padding">EDO</span></div>
+                      <div class="result__row">
+                        <p class="row--time row--padding">16:00</p>
+                        <p class="row--time row--padding">09:45</p>
+                      </div>
+                      <div class="result__row">
+                        <p class="row--date row--padding">12 Jan</p>
+                        <p class="row--date row--padding">13 Jan</p>
+                      </div>
+                    </div>
+                    <div class="result__item result__info">
+                      <ul class="result__service">
+                        <li><a href="#">14 Seaters Arrival</a></li>
+                        <li><a href="#">4.3 Rating</a></li>
+                        <li><a href="#">Fare Rule</a></li>
+                        <li><a href="#">Amenities</a></li>
+                      </ul>
+                    </div>
+                    <div class="result__item result__price">
+                      <div class="result__price-box">
+                        <p class="result__price-title">N80,000</p>
+                        <div class="result__button"><a class="btn btn--result btn--details" href="#">Details</a><a class="btn btn--result btn--select" href="/select-seat.html">Select</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__rate">
+                    <ul>
+                      <li>14 Seaters</li>
+                      <li>4.3 Rating</li>
+                      <li>Fare Rule</li>
+                      <li>Amenities</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <footer class="footer container">
+          <div class="footer__list">
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>MENU LISTS</h2>
+              </div>
+              <ul class="footer__box">
+                <li><a href="javascript:void(0)">About us</a></li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                <li><a href="javascript:void(0)">Cargo</a></li>
+                <li><a href="javascript:void(0)">FAQ’S</a></li>
+                <li><a href="javascript:void(0)">Charter Service</a></li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>CONTACT US</h2>
+              </div>
+              <div class="footer__box">
+                <p>Get through to us via our social media platform below. Instagram , Twitter and Facebook.</p>
+                <ul class="social">
+                  <li class="social__img"><a><img src="img/icon-ins.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-twitter.png" alt=""/></a></li>
+                  <li class="social__img"><a><img src="img/icon-facebook.png" alt=""/></a></li>
+                </ul>
+                <p>We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.</p>
+                <div class="contact">
+                  <div class="contact__img"><img src="img/icon-phone.png" alt=""/></div>
+                  <p>09076555353</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">
+                <h2>SEND A MESSAGE</h2>
+              </div>
+              <div class="footer__box">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Enter Email Address" id="email"/>
+                <label for="message">Message</label>
+                <input type="text" placeholder="Type Message Here" id="message"/>
+                <button id="submit">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/filter.js"></script>
+  </body>
+</html>

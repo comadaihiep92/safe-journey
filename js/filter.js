@@ -34,7 +34,7 @@ const range = document.getElementById("time"),
     );
     let newPosition = 10 - newValue * 0.1;
     rangeV.innerHTML = `</span> <span class="icon icon--back-label"></span>
-    <label for="time">${range.value}:00</label><span class="icon icon--next-label"></span>`;
+      <label for="time">${range.value}:00</label><span class="icon icon--next-label"></span>`;
 
     if (newValue > 50) {
       newPosition = 10 + newValue * 1.2;
@@ -55,7 +55,7 @@ const money = document.getElementById("money"),
     );
     let newPosition2 = 10 - newValue2 * 0.1;
     rangeMoney.innerHTML = `</span> <span class="icon icon--back-label"></span>
-    <label for="money">₦${money.value},000</label><span class="icon icon--next-label"></span>`;
+      <label for="money">${money.value}:00</label><span class="icon icon--next-label"></span>`;
     if (newValue2 > 50) {
       newPosition2 = 10 + newValue2 * 1.5;
       rangeMoney.style.left = `calc(${newValue2}% - (${newPosition2}px))`;

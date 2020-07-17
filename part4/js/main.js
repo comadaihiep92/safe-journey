@@ -65,5 +65,3 @@ const money = document.getElementById("money"),
   };
 document.addEventListener("DOMContentLoaded", setValue2);
 money.addEventListener("input", setValue2);
-
-// time filter

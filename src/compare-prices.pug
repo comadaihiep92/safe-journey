@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Safe-Journey
+        link(rel="stylesheet", href="css/reset.css")
+        link(rel="stylesheet", href="css/style.css")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js')
+
+    body
+        .wrapper
+            .row
+                header.header.container
+                    nav.nav
+                        .logo
+                            a(href="/index.html")
+                                img(src="img/logo.png")
+                        ul.nav__list
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link Home
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link About Us
+                            li.nav__item
+                                a(href="/compare-prices.html").nav__link.nav__link--active Compare Prices
+                            li.nav__item
+                                a(href="javascript:void(0)").nav__link Booking Status
+            .row
+                //- search
+                .search.container
+
+                    .box.search__box
+                        .box__container.search__container
+                            //- h1.search__title ONE WAY
+                            .box__date.content1.flex.around
+                                .input-box.no-margin
+                                    label(for="park")
+                                    span.icon3.icon--place
+                                    input(type="text" placeholder="Lagos (LOS)")#park.input.input3.no-radius
+                                .input-box.no-margin
+                                    label(for="state")
+                                    span.icon3.icon--place
+                                    input(type="text" placeholder="EDO (BENIN)")#state.input.input3.no-radius
+                                .input-box.no-margin
+                                    label(for="date")
+                                    span.icon3
+                                    input(type="text" placeholder="Departure Date" onfocus="(this.type='date')")#date.input.input3.no-radius
+                                //- .input-box.no-margin
+                                //-     label(for="seat")
+                                //-     input(type="text" placeholder="No of Seat")#seat.input.input4.no-radius
+                                .btn.btn--search.btn--white Search
+                    .result
+                        .result__top
+                            h3.item__title COMPARE  PRICES  Result
+                            span.result__title FILTER
+                            span.icon.icon--list
+                        .result__bottom
+                            .result__filter.filter
+                                h3.filter__title FILTERING
+                                .filter__item
+                                    p.filter__text PRICE
+                                    .filter__checkbox
+                                        input.filter__input#price1(type="checkbox", name="price1")
+                                        label.filter__label(for="price1") Cheapest to Highest
+                                    .filter__checkbox
+                                        input.filter__input#price2(type="checkbox", name="price2")
+                                        label.filter__label(for="price2") Highest to Cheapest
+                                .filter__item
+                                    p.filter__text TRANSPORT COMPANY
+                                    .filter__checkbox
+                                        input.filter__input#trans1(type="checkbox", name="trans1")
+                                        label.filter__label(for="trans1") E. Ekesons Motors
+                                    .filter__checkbox
+                                        input.filter__input#trans2(type="checkbox", name="trans2")
+                                        label.filter__label(for="trans2") Okeyson Motors
+                                    .filter__checkbox
+                                        input.filter__input#trans3(type="checkbox", name="trans3")
+                                        label.filter__label(for="trans3") Peace Mass Transit
+                                    .filter__checkbox
+                                        input.filter__input#trans4(type="checkbox", name="trans4")
+                                        label.filter__label(for="trans4") Welfare Transport
+                                    .filter__checkbox
+                                        input.filter__input#trans5(type="checkbox", name="trans5")
+                                        label.filter__label(for="trans5") Calculux Motors
+                                    .filter__checkbox
+                                        input.filter__input#trans6(type="checkbox", name="trans6")
+                                        label.filter__label(for="trans6") Dugbe Transport
+                                    .filter__checkbox
+                                        input.filter__input#trans7(type="checkbox", name="trans7")
+                                        label.filter__label(for="trans7") J’ae Transport
+                                    .filter__checkbox
+                                        input.filter__input#trans8(type="checkbox", name="trans8")
+                                        label.filter__label(for="trans8") Efex Executive Transport
+                                    .filter__checkbox
+                                        input.filter__input#trans9(type="checkbox", name="trans9")
+                                        label.filter__label(for="trans9") Anyaloko Transport
+                                    .filter__checkbox
+                                        input.filter__input#trans10(type="checkbox", name="trans10")
+                                        label.filter__label(for="trans10") Pacpin Transport
+                                .filter__item
+                                    p.filter__text ROUTE BY PARK (lagos State)
+                                    .filter__checkbox
+                                        input.filter__input#route1(type="checkbox", name="route1")
+                                        label.filter__label(for="route1") Ajah Terminal
+                                    .filter__checkbox
+                                        input.filter__input#route2(type="checkbox", name="route2")
+                                        label.filter__label(for="route2") Jibowu Terminal
+                                    .filter__checkbox
+                                        input.filter__input#route3(type="checkbox", name="route3")
+                                        label.filter__label(for="route3") Maza Maza Terminal
+                                    .filter__checkbox
+                                        input.filter__input#route4(type="checkbox", name="route4")
+                                        label.filter__label(for="route4") Iyana Ipaja Terminal
+                                .filter__item
+                                    p.filter__text TAKE OFF TIME (MORNING - EVENING)
+                                    .departure.filter__dep
+                                        .departure__item.filter__dep-item
+                                            .departure__box
+                                                .departure__box-item 00:00
+                                                .departure__box-item 16:00
+                                            .departure__range
+                                                .departure__range--box#rangeTime
+                                                    span.icon.icon--back-label
+                                                    label(for="time") 09:00
+                                                    span.icon.icon--next-label
+                                                input(type="range" id="time" class="range--custom" min="0" max="16" step="1" value="7")
+                                        .departure__item.filter__dep-item
+                                            .departure__box
+                                                .departure__box-item 16:00
+                                                .departure__box-item 24:00
+                                            .departure__range
+                                                .departure__range--box#rangeMoney
+                                                    span.icon.icon--back-label
+                                                    label(for="money") 19:00
+                                                    span.icon.icon--next-label
+                                                input(type="range" id="money" class="range--custom" min="16" max="24" step="1" value="20")
+                                .filter__item
+                                    p.filter__text tYPE OF VEHICLE
+                                    .filter__checkbox
+                                        input.filter__input#type1(type="checkbox", name="type1")
+                                        label.filter__label(for="type1") Toyota Hiace
+                                    .filter__checkbox
+                                        input.filter__input#type2(type="checkbox", name="type2")
+                                        label.filter__label(for="type2") Jet Mover
+                                    .filter__checkbox
+                                        input.filter__input#type3(type="checkbox", name="type3")
+                                        label.filter__label(for="type3") Sienna Bus
+                                    .filter__checkbox
+                                        input.filter__input#type4(type="checkbox", name="type4")
+                                        label.filter__label(for="type4") Toyota Corolla
+                                    .filter__checkbox
+                                        input.filter__input#type5(type="checkbox", name="type5")
+                                        label.filter__label(for="type5") Luxurious Bus (39 Seater )
+                                    .filter__checkbox
+                                        input.filter__input#type6(type="checkbox", name="type6")
+                                        label.filter__label(for="type6") Luxurious Bus Regular ( 45 Seater )
+                                    .filter__checkbox
+                                        input.filter__input#type7(type="checkbox", name="type7")
+                                        label.filter__label(for="type7") Luxurious Bus VIP  ( 45 Seater )
+                                    .filter__checkbox
+                                        input.filter__input#type8(type="checkbox", name="type8")
+                                        label.filter__label(for="type8") Luxurious Bus Regular ( 55 Seaters )
+                                    .filter__checkbox
+                                        input.filter__input#type9(type="checkbox", name="type9")
+                                        label.filter__label(for="type9") Luxurious Bus VIP ( 55 Seaters )
+                                .filter__item
+                                    p.filter__text BUS FEATURES
+                                    .filter__checkbox
+                                        input.filter__input#bus1(type="checkbox", name="bus1")
+                                        label.filter__label(for="bus1") A/C
+                                    .filter__checkbox
+                                        input.filter__input#bus2(type="checkbox", name="bus2")
+                                        label.filter__label(for="bus2") Non A/C
+                                    .filter__checkbox
+                                        input.filter__input#bus3(type="checkbox", name="bus3")
+                                        label.filter__label(for="bus3") WIFI
+                                    .filter__checkbox
+                                        input.filter__input#bus4(type="checkbox", name="bus4")
+                                        label.filter__label(for="bus4") Leg Room
+                                    .filter__checkbox
+                                        input.filter__input#bus5(type="checkbox", name="bus5")
+                                        label.filter__label(for="bus5") USB Charging Port
+                                button.filter__button
+                                    img.filter__img(src="./img/icon-filter.png", alt="")
+                                    | Filter
+
+
+                            .result__list
+                                .result__col
+                                    .result__box.result__box--new
+                                        .result__item.result__img
+                                            img(src="img/bus1.png", alt="")
+                                        .result__item.result__time
+                                            .result__row
+                                                p.row--title Departure
+                                                p.row--title Arrival
+                                            .result__row
+                                                span.row--address.row--padding LAG
+                                                span.row--address.row--flex
+                                                    span.icon.icon--arrival
+                                                    span.row--mini-time 1hr 20 mins
+                                                span.row--address.row--padding EDO
+                                            .result__row
+                                                p.row--time.row--padding 16:00
+                                                p.row--time.row--padding 09:45
+                                            .result__row
+                                                p.row--date.row--padding 12 Jan
+                                                p.row--date.row--padding 13 Jan
+                                        .result__item.result__info
+                                            ul.result__service
+                                                li
+                                                    a(href="#") 14 Seaters Arrival
+                                                li
+                                                    a(href="#") 4.3 Rating
+                                                li
+                                                    a(href="#") Fare Rule
+                                                li
+                                                    a(href="#") Amenities
+                                        .result__item.result__price
+                                            .result__price-box
+                                                p.result__price-title N80,000
+                                                .result__button
+                                                    a(href="#").btn.btn--result.btn--details Details
+                                                    a(href="/select-seat.html").btn.btn--result.btn--select Select
+                                    .result__rate
+                                        ul
+                                            li 14 Seaters
+                                            li 4.3 Rating
+                                            li Fare Rule
+                                            li Amenities
+                                .result__col
+                                    .result__box.result__box--new
+                                        .result__item.result__img
+                                            img(src="img/bus2.png", alt="")
+                                        .result__item.result__time
+                                            .result__row
+                                                p.row--title Departure
+                                                p.row--title Arrival
+                                            .result__row
+                                                span.row--address.row--padding LAG
+                                                span.row--address.row--flex
+                                                    span.icon.icon--arrival
+                                                    span.row--mini-time 1hr 20 mins
+                                                span.row--address.row--padding EDO
+                                            .result__row
+                                                p.row--time.row--padding 16:00
+                                                p.row--time.row--padding 09:45
+                                            .result__row
+                                                p.row--date.row--padding 12 Jan
+                                                p.row--date.row--padding 13 Jan
+                                        .result__item.result__info
+                                            ul.result__service
+                                                li
+                                                    a(href="#") 14 Seaters Arrival
+                                                li
+                                                    a(href="#") 4.3 Rating
+                                                li
+                                                    a(href="#") Fare Rule
+                                                li
+                                                    a(href="#") Amenities
+                                        .result__item.result__price
+                                            .result__price-box
+                                                p.result__price-title N80,000
+                                                .result__button
+                                                    a(href="#").btn.btn--result.btn--details Details
+                                                    a(href="/select-seat.html").btn.btn--result.btn--select Select
+                                    .result__rate
+                                        ul
+                                            li 14 Seaters
+                                            li 4.3 Rating
+                                            li Fare Rule
+                                            li Amenities
+                                .result__col
+                                    .result__box.result__box--new
+                                        .result__item.result__img
+                                            img(src="img/bus3.png", alt="")
+                                        .result__item.result__time
+                                            .result__row
+                                                p.row--title Departure
+                                                p.row--title Arrival
+                                            .result__row
+                                                span.row--address.row--padding LAG
+                                                span.row--address.row--flex
+                                                    span.icon.icon--arrival
+                                                    span.row--mini-time 1hr 20 mins
+                                                span.row--address.row--padding EDO
+                                            .result__row
+                                                p.row--time.row--padding 16:00
+                                                p.row--time.row--padding 09:45
+                                            .result__row
+                                                p.row--date.row--padding 12 Jan
+                                                p.row--date.row--padding 13 Jan
+                                        .result__item.result__info
+                                            ul.result__service
+                                                li
+                                                    a(href="#") 14 Seaters Arrival
+                                                li
+                                                    a(href="#") 4.3 Rating
+                                                li
+                                                    a(href="#") Fare Rule
+                                                li
+                                                    a(href="#") Amenities
+                                        .result__item.result__price
+                                            .result__price-box
+                                                p.result__price-title N80,000
+                                                .result__button
+                                                    a(href="#").btn.btn--result.btn--details Details
+                                                    a(href="/select-seat.html").btn.btn--result.btn--select Select
+                                    .result__rate
+                                        ul
+                                            li 14 Seaters
+                                            li 4.3 Rating
+                                            li Fare Rule
+                                            li Amenities
+                                .result__col
+                                    .result__box.result__box--new
+                                        .result__item.result__img
+                                            img(src="img/img-jet.png", alt="")
+                                        .result__item.result__time
+                                            .result__row
+                                                p.row--title Departure
+                                                p.row--title Arrival
+                                            .result__row
+                                                span.row--address.row--padding LAG
+                                                span.row--address.row--flex
+                                                    span.icon.icon--arrival
+                                                    span.row--mini-time 1hr 20 mins
+                                                span.row--address.row--padding EDO
+                                            .result__row
+                                                p.row--time.row--padding 16:00
+                                                p.row--time.row--padding 09:45
+                                            .result__row
+                                                p.row--date.row--padding 12 Jan
+                                                p.row--date.row--padding 13 Jan
+                                        .result__item.result__info
+                                            ul.result__service
+                                                li
+                                                    a(href="#") 14 Seaters Arrival
+                                                li
+                                                    a(href="#") 4.3 Rating
+                                                li
+                                                    a(href="#") Fare Rule
+                                                li
+                                                    a(href="#") Amenities
+                                        .result__item.result__price
+                                            .result__price-box
+                                                p.result__price-title N80,000
+                                                .result__button
+                                                    a(href="#").btn.btn--result.btn--details Details
+                                                    a(href="/select-seat.html").btn.btn--result.btn--select Select
+                                    .result__rate
+                                        ul
+                                            li 14 Seaters
+                                            li 4.3 Rating
+                                            li Fare Rule
+                                            li Amenities
+                                .result__col
+                                    .result__box.result__box--new
+                                        .result__item.result__img
+                                            img(src="img/img-camry.png", alt="")
+                                        .result__item.result__time
+                                            .result__row
+                                                p.row--title Departure
+                                                p.row--title Arrival
+                                            .result__row
+                                                span.row--address.row--padding LAG
+                                                span.row--address.row--flex
+                                                    span.icon.icon--arrival
+                                                    span.row--mini-time 1hr 20 mins
+                                                span.row--address.row--padding EDO
+                                            .result__row
+                                                p.row--time.row--padding 16:00
+                                                p.row--time.row--padding 09:45
+                                            .result__row
+                                                p.row--date.row--padding 12 Jan
+                                                p.row--date.row--padding 13 Jan
+                                        .result__item.result__info
+                                            ul.result__service
+                                                li
+                                                    a(href="#") 14 Seaters Arrival
+                                                li
+                                                    a(href="#") 4.3 Rating
+                                                li
+                                                    a(href="#") Fare Rule
+                                                li
+                                                    a(href="#") Amenities
+                                        .result__item.result__price
+                                            .result__price-box
+                                                p.result__price-title N80,000
+                                                .result__button
+                                                    a(href="#").btn.btn--result.btn--details Details
+                                                    a(href="/select-seat.html").btn.btn--result.btn--select Select
+                                    .result__rate
+                                        ul
+                                            li 14 Seaters
+                                            li 4.3 Rating
+                                            li Fare Rule
+                                            li Amenities
+            .row
+                footer.footer.container
+                    .footer__list
+                        .footer__item
+                            .footer__title
+                                h2 MENU LISTS
+                            ul.footer__box
+                                li
+                                    a(href="javascript:void(0)") About us
+                                li
+                                    a(href="javascript:void(0)") Terms and Conditions
+                                li
+                                    a(href="javascript:void(0)") Cargo
+                                li
+                                    a(href="javascript:void(0)") FAQ’S
+                                li
+                                    a(href="javascript:void(0)") Charter Service
+                        .footer__item
+                            .footer__title
+                                h2 CONTACT US
+                            .footer__box
+                                p Get through to us via our social media platform below. Instagram , Twitter and Facebook.
+                                ul.social
+                                    li.social__img
+                                        a
+                                            img(src="img/icon-ins.png", alt="")
+                                    li.social__img
+                                        a
+                                            img(src="img/icon-twitter.png", alt="")
+                                    li.social__img
+                                        a
+                                            img(src="img/icon-facebook.png", alt="")
+                                p We have an online customer care support that can attend to all your complaints through our live chat and you can also call us on.
+                                .contact
+                                    .contact__img
+                                        img(src="img/icon-phone.png", alt="")
+                                    p 09076555353
+                        .footer__item
+                            .footer__title
+                                h2 SEND A MESSAGE
+                            .footer__box
+                                label(for="email") Email Address
+                                input(type="email" placeholder="Enter Email Address")#email
+                                label(for="message") Message
+                                input(type="text" placeholder="Type Message Here")#message
+                                button#submit Send Message
+        //- script(src="js/main.js")
+        script(src="js/filter.js")
+            //- .row
+            //- .row
